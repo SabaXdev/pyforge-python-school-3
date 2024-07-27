@@ -2,6 +2,7 @@ from typing import List
 from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Query, Path
 from models import Molecule
 from rdkit import Chem
+from os import getenv
 
 
 def substructure_search(mols, mol):
@@ -19,6 +20,12 @@ molecules: List[Molecule] = [Molecule(mol_id=1, name="CCO"),    # Ethanol
                              Molecule(mol_id=2, name="c1ccccc1"),   # Benzene
                              Molecule(mol_id=3, name="CC(=O)O"),    # Acetic acid
                              Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")]  # Aspirin
+
+
+# This method checks balancing
+@app.get("/")
+def get_server():
+    return {"server_id": getenv("SERVER_ID", "1")}
 
 
 @app.post("/molecules/{mol_id}", status_code=201)

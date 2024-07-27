@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+rdkit
+# Add any other dependencies your application needs

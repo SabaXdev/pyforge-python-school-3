@@ -1,0 +1,36 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  web1:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      SERVER_ID: SERVER-1
+    networks:
+      - webnet
+
+  web2:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      SERVER_ID: SERVER-2
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - web1
+      - web2
+    networks:
+      - webnet
+
+networks:
+  webnet:
