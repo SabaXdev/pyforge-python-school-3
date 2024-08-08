@@ -8,10 +8,12 @@ from os import getenv
 def substructure_search(mols, mol):
     # Convert the SMILES string to an RDKit molecule object
     molecule = Chem.MolFromSmiles(mol)
+    if not molecule:
+        return []
     return [smile for smile in mols if Chem.MolFromSmiles(smile).HasSubstructMatch(molecule)]
 
 
-# print(substructure_search(["CCO", "c1ccccc1", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"], "c1ccccc1"))
+# print(substructure_search(["CCO", "c1ccccc1", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"], "C"))
 
 app = FastAPI()
 
