@@ -77,8 +77,9 @@ def retrieve_molecules():
 
 @app.get("/search", response_model=List[str])
 def search_molecules_by_smile(
-        substructure_smile: str = Query(...,
-                                        description="SMILES string of the substructure.")):
+        substructure_smile:
+        str =
+        Query(..., description="SMILES string of the substructure.")):
     smiles = [mol.name for mol in molecules]
 
     substructure = Chem.MolFromSmiles(substructure_smile)
