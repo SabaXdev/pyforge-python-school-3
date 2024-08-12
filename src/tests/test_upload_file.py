@@ -1,6 +1,7 @@
-import pytest
 from fastapi.testclient import TestClient
 from main import app, Molecule
+import io
+import pytest
 
 
 @pytest.fixture
@@ -9,22 +10,29 @@ def client():
         yield test_client
 
 
-@pytest.fixture
-def initial_molecules():
-    return {
-        1: Molecule(mol_id=1, name="CCO"),
-        2: Molecule(mol_id=2, name="c1ccccc1"),
-        3: Molecule(mol_id=3, name="CC(=O)O"),
-        4: Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")
-    }
 
 
 @pytest.fixture
 def sample_file():
-    # Create a file-like object with sample data
-    from io import BytesIO
-    file_content = "5 CH4\n6 CO\n".encode('utf-8')
-    return BytesIO(file_content)
+    # Create a sample file content with molecule data
+    content = "5 CH4\n6 CO"  # Ensure this matches the expected format
+    return io.BytesIO(content.encode("utf-8"))
+
+
+@pytest.fixture
+def initial_molecules():
+    return [
+        Molecule(mol_id=1, name="CCO"),
+        Molecule(mol_id=2, name="c1ccccc1"),
+        Molecule(mol_id=3, name="CC(=O)O"),
+        Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")
+    ]
+
+
+
+def setup_initial_data(client, molecules):
+    for mol in molecules.values():
+        client.post("/molecules", json=mol.dict())
 
 
 def test_upload_file(client, initial_molecules, sample_file):
@@ -37,12 +45,13 @@ def test_upload_file(client, initial_molecules, sample_file):
     response = client.get("/molecules")
     assert response.status_code == 200
 
-    # Convert the response to a dictionary of Molecules
-    response_molecules = {mol["mol_id"]: Molecule(**mol) for mol in response.json()}
+    # Convert the response to a set of Molecule identifiers
+    response_molecules = response.json()
+    response_molecules_set = {(mol["mol_id"], mol["name"]) for mol in response_molecules}
 
     # Create a set of expected molecule identifiers
     expected_molecules_set = {
-        (mol.mol_id, mol.name) for mol in initial_molecules.values()
+        (mol.mol_id, mol.name) for mol in initial_molecules
     }
 
     # Add newly added molecules to the set
@@ -51,10 +60,8 @@ def test_upload_file(client, initial_molecules, sample_file):
         (6, "CO")
     })
 
-    # Create a set of actual response molecule identifiers
-    response_molecules_set = {
-        (mol["mol_id"], mol["name"]) for mol in response.json()
-    }
-
     # Validate that expected and actual sets match
     assert expected_molecules_set == response_molecules_set
+
+
+

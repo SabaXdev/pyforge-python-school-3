@@ -84,15 +84,27 @@ def search_molecules_by_smile(substructure_smile: str = Query(..., description="
 
 @app.post("/add")
 async def upload_file(file: UploadFile = File(...)):
-    # Other tasks are running while waiting entire file to be read
     content = await file.read()
-    # Convert the raw bytes into a string using "UTF-8" encoding
     lines = content.decode("utf-8").splitlines()
 
-    # Iterate over each line and add fetched molecule data into molecules list
-    for line in lines:
-        mol_id, name = line.split()
-        molecules.append(Molecule(mol_id=int(mol_id), name=name))
+    # Ensure molecules are a global or session-wide list, e.g., `molecules`
+    global molecules
+    # Create a set of existing IDs to prevent duplicates
+    existing_ids = {mol.mol_id for mol in molecules}
 
-    # Return success message
+    for line in lines:
+        parts = line.split()
+        if len(parts) != 2:
+            return {"detail": "Invalid file format"}
+
+        mol_id, name = parts
+        mol_id = int(mol_id)
+
+        # Add the molecule if the ID is not already in the list
+        if mol_id not in existing_ids:
+            molecules.append(Molecule(mol_id=mol_id, name=name))
+            existing_ids.add(mol_id)
+
     return {"content": "Molecule/Molecules added successfully."}
+
+

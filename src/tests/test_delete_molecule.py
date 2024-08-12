@@ -10,7 +10,7 @@ def client():
 
 
 @pytest.fixture
-def molecules():
+def initial_molecules():
     return {
         1: Molecule(mol_id=1, name="CCO"),
         2: Molecule(mol_id=2, name="c1ccccc1"),
@@ -19,25 +19,33 @@ def molecules():
     }
 
 
-@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5])
-def test_delete_molecule(client, molecules, mol_id):
-    if mol_id in molecules:
-        # Ensure the molecule exists before deletion
-        response = client.get(f"/molecules/{mol_id}")
-        assert response.status_code == 200
-        assert response.json() == {"mol_id": mol_id, "name": molecules[mol_id].name}
+def setup_initial_data(client, molecules):
+    for mol in molecules.values():
+        client.post("/molecules", json=mol.dict())
 
-        # Perform the delete operation
-        response = client.delete(f"/molecules/{mol_id}")
-        assert response.status_code == 200
-        assert response.json() == {"mol_id": mol_id, "name": molecules[mol_id].name}
 
-        # Verify the molecule has been deleted
-        response = client.get(f"/molecules/{mol_id}")
-        assert response.status_code == 404
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
-    else:
-        # If the molecule didn't exist before deletion, expect a 404
-        response = client.delete(f"/molecules/{mol_id}")
-        assert response.status_code == 404
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
+def test_delete_molecule(client, initial_molecules):
+    # Setup initial data
+    setup_initial_data(client, initial_molecules)
+
+    for mol_id in [1, 2, 3, 4, 5]:
+        if mol_id in initial_molecules:
+            # Ensure the molecule exists before deletion
+            response = client.get(f"/molecules/{mol_id}")
+            assert response.status_code == 200
+            assert response.json() == {"mol_id": mol_id, "name": initial_molecules[mol_id].name}
+
+            # Perform the delete operation
+            response = client.delete(f"/molecules/{mol_id}")
+            assert response.status_code == 200
+            assert response.json() == {"mol_id": mol_id, "name": initial_molecules[mol_id].name}
+
+            # Verify the molecule has been deleted
+            response = client.get(f"/molecules/{mol_id}")
+            assert response.status_code == 404
+            assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
+        else:
+            # If the molecule didn't exist before deletion, expect a 404
+            response = client.delete(f"/molecules/{mol_id}")
+            assert response.status_code == 404
+            assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
