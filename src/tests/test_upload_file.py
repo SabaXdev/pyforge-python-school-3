@@ -29,7 +29,6 @@ def initial_molecules():
     ]
 
 
-
 def setup_initial_data(client, molecules):
     for mol in molecules.values():
         client.post("/molecules", json=mol.dict())

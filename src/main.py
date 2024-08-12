@@ -57,7 +57,6 @@ def update_molecule(mol_id: int, updated_molecule: Molecule):
 
 @app.delete("/molecules/{mol_id}", response_model=Molecule, status_code=200)
 def delete_molecule(mol_id: int):
-    global molecules
     for index, molecule in enumerate(molecules):
         if molecule.mol_id == mol_id:
             deleted_molecule = molecules.pop(index)
@@ -112,3 +111,8 @@ async def upload_file(file: UploadFile = File(...)):
     return {"content": "Molecule/Molecules added successfully."}
 
 
+@app.post("/clear_molecules", status_code=200)
+def clear_molecules():
+    global molecules
+    molecules = []  # Clear the list
+    return {"detail": "Molecules cleared successfully"}

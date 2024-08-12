@@ -20,7 +20,7 @@ def molecules():
 
 
 # Test for retrieving molecules
-@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5])
+@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5, 10])
 def test_retrieve_molecule(client, molecules, mol_id):
     response = client.get(f"/molecules/{mol_id}")
 

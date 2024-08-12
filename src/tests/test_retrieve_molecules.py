@@ -19,14 +19,32 @@ def molecules():
     }
 
 
+@pytest.fixture(autouse=True)
+def reset_molecules(client):
+    # Clear the in-memory storage before each test
+    client.post("/clear_molecules")
+    yield
+    client.post("/clear_molecules")  # Clean up after each test
+
+
 # Test for retrieving molecules
 def test_retrieve_molecules(client, molecules):
-    response = client.get(f"/molecules")
+    # Setup initial data
+    for mol in molecules.values():
+        client.post(f"/molecules/{mol.mol_id}", json=mol.model_dump())  # Use model_dump()
+
+    # Retrieve all molecules
+    response = client.get("/molecules")
     assert response.status_code == 200
 
+    # Convert the response to a set of Molecule identifiers
     response_molecules = response.json()
-    assert len(response_molecules) == len(molecules)
+    response_molecules_set = {(mol["mol_id"], mol["name"]) for mol in response_molecules}
 
-    for i, molecule in enumerate(response.json()):
-        assert molecule["mol_id"] == molecules[i+1].mol_id
-        assert molecule["name"] == molecules[i+1].name
+    # Create a set of expected molecule identifiers
+    expected_molecules_set = {
+        (mol.mol_id, mol.name) for mol in molecules.values()
+    }
+
+    # Validate that expected and actual sets match
+    assert expected_molecules_set == response_molecules_set
