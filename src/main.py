@@ -33,6 +33,7 @@ def get_server():
 @app.post("/molecules/{mol_id}", status_code=201)
 def add_molecule(molecule: Molecule):
     # Add Molecule object into the molecules
+    print("POST request received at /molecules")
     molecules.append(molecule)
     return molecule
 
@@ -54,11 +55,14 @@ def update_molecule(mol_id: int, updated_molecule: Molecule):
     raise HTTPException(status_code=404, detail=f'Molecule with id {mol_id} not found.')
 
 
-@app.delete("/molecules/{mol_id}", response_model=Molecule)
+@app.delete("/molecules/{mol_id}", response_model=Molecule, status_code=200)
 def delete_molecule(mol_id: int):
+    global molecules
     for index, molecule in enumerate(molecules):
         if molecule.mol_id == mol_id:
             deleted_molecule = molecules.pop(index)
+            print("Deleted molecule:", deleted_molecule)
+            print("Remaining molecules:", molecules)
             return deleted_molecule
     raise HTTPException(status_code=404, detail=f'Molecule with id {mol_id} not found.')
 
