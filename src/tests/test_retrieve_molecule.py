@@ -37,5 +37,5 @@ def test_retrieve_molecule(client, molecules, mol_id):
 
     else:
         # When status is 404, check the error message
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
-    
+        assert response.json() == {"detail": f"Molecule with id "
+                                             f"{mol_id} not found."}

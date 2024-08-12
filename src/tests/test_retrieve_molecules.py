@@ -31,7 +31,8 @@ def reset_molecules(client):
 def test_retrieve_molecules(client, molecules):
     # Setup initial data
     for mol in molecules.values():
-        client.post(f"/molecules/{mol.mol_id}", json=mol.model_dump())  # Use model_dump()
+        client.post(f"/molecules/{mol.mol_id}",
+                    json=mol.model_dump())  # Use model_dump()
 
     # Retrieve all molecules
     response = client.get("/molecules")
@@ -39,7 +40,8 @@ def test_retrieve_molecules(client, molecules):
 
     # Convert the response to a set of Molecule identifiers
     response_molecules = response.json()
-    response_molecules_set = {(mol["mol_id"], mol["name"]) for mol in response_molecules}
+    response_molecules_set = {(mol["mol_id"], mol["name"])
+                              for mol in response_molecules}
 
     # Create a set of expected molecule identifiers
     expected_molecules_set = {

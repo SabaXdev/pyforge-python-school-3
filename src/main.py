@@ -10,16 +10,18 @@ def substructure_search(mols, mol):
     molecule = Chem.MolFromSmiles(mol)
     if not molecule:
         return []
-    return [smile for smile in mols if Chem.MolFromSmiles(smile).HasSubstructMatch(molecule)]
+    return [smile for smile in mols
+            if Chem.MolFromSmiles(smile).HasSubstructMatch(molecule)]
 
 
 app = FastAPI()
 
-# Create a list to hold instances of Molecule and add instances of Molecule to the list
+# Create a list to hold instances of Molecule and add instances
+# of Molecule to the list
 molecules: List[Molecule] = [
-    Molecule(mol_id=1, name="CCO"),         # Ethanol
-    Molecule(mol_id=2, name="c1ccccc1"),    # Benzene
-    Molecule(mol_id=3, name="CC(=O)O"),     # Acetic acid
+    Molecule(mol_id=1, name="CCO"),  # Ethanol
+    Molecule(mol_id=2, name="c1ccccc1"),  # Benzene
+    Molecule(mol_id=3, name="CC(=O)O"),  # Acetic acid
     Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")  # Aspirin
 ]
 
@@ -75,7 +77,8 @@ def retrieve_molecules():
 
 @app.get("/search", response_model=List[str])
 def search_molecules_by_smile(
-        substructure_smile: str = Query(..., description="SMILES string of the substructure.")):
+        substructure_smile: str = Query(...,
+                                        description="SMILES string of the substructure.")):
     smiles = [mol.name for mol in molecules]
 
     substructure = Chem.MolFromSmiles(substructure_smile)

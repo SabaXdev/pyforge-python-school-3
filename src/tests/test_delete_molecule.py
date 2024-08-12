@@ -37,19 +37,23 @@ def test_delete_molecule(client, initial_molecules, mol_id):
         # Ensure the molecule exists before deletion
         response = client.get(f"/molecules/{mol_id}")
         assert response.status_code == 200
-        assert response.json() == {"mol_id": mol_id, "name": initial_molecules[mol_id].name}
+        assert response.json() == {"mol_id": mol_id,
+                                   "name": initial_molecules[mol_id].name}
 
         # Perform the delete operation
         response = client.delete(f"/molecules/{mol_id}")
         assert response.status_code == 200
-        assert response.json() == {"mol_id": mol_id, "name": initial_molecules[mol_id].name}
+        assert response.json() == {"mol_id": mol_id,
+                                   "name": initial_molecules[mol_id].name}
 
         # Verify the molecule has been deleted
         response = client.get(f"/molecules/{mol_id}")
         assert response.status_code == 404
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
+        assert response.json() == {"detail": f"Molecule with id "
+                                             f"{mol_id} not found."}
     else:
         # If the molecule didn't exist before deletion, expect a 404
         response = client.delete(f"/molecules/{mol_id}")
         assert response.status_code == 404
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
+        assert response.json() == {"detail": f"Molecule with id "
+                                             f"{mol_id} not found."}

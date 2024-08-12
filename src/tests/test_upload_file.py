@@ -46,9 +46,11 @@ def test_upload_file(client, initial_molecules, sample_file):
     setup_initial_data(client, initial_molecules)
 
     # Send POST request with sample file
-    response = client.post("/add", files={"file": ("sample.txt", sample_file, "text/plain")})
+    response = client.post("/add", files={"file": ("sample.txt",
+                                                   sample_file, "text/plain")})
     assert response.status_code == 200
-    assert response.json() == {"content": "Molecule/Molecules added successfully."}
+    assert response.json() == {"content": "Molecule/Molecules "
+                                          "added successfully."}
 
     # Retrieve all molecules to verify the new ones are added
     response = client.get("/molecules")
@@ -56,7 +58,8 @@ def test_upload_file(client, initial_molecules, sample_file):
 
     # Convert the response to a set of Molecule identifiers
     response_molecules = response.json()
-    response_molecules_set = {(mol["mol_id"], mol["name"]) for mol in response_molecules}
+    response_molecules_set = {(mol["mol_id"], mol["name"])
+                              for mol in response_molecules}
 
     # Create a set of expected molecule identifiers
     expected_molecules_set = {
