@@ -10,8 +10,6 @@ def client():
         yield test_client
 
 
-
-
 @pytest.fixture
 def sample_file():
     # Create a sample file content with molecule data
@@ -29,12 +27,24 @@ def initial_molecules():
     ]
 
 
+@pytest.fixture(autouse=True)
+def clear_molecules(client):
+    # Clear existing molecules before each test
+    client.post("/clear_molecules")
+    yield
+    client.post("/clear_molecules")  # Optionally clear after the test as well
+
+
 def setup_initial_data(client, molecules):
-    for mol in molecules.values():
-        client.post("/molecules", json=mol.dict())
+    for mol in molecules:
+        response = client.post(f"/molecules/{mol.mol_id}", json=mol.dict())
+        assert response.status_code == 201
 
 
 def test_upload_file(client, initial_molecules, sample_file):
+    # Setup initial data
+    setup_initial_data(client, initial_molecules)
+
     # Send POST request with sample file
     response = client.post("/add", files={"file": ("sample.txt", sample_file, "text/plain")})
     assert response.status_code == 200
@@ -61,6 +71,3 @@ def test_upload_file(client, initial_molecules, sample_file):
 
     # Validate that expected and actual sets match
     assert expected_molecules_set == response_molecules_set
-
-
-
