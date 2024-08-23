@@ -20,7 +20,7 @@ def molecules():
 
 
 # Test for retrieving molecules
-@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5])
+@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5, 10])
 def test_retrieve_molecule(client, molecules, mol_id):
     response = client.get(f"/molecules/{mol_id}")
 
@@ -37,5 +37,5 @@ def test_retrieve_molecule(client, molecules, mol_id):
 
     else:
         # When status is 404, check the error message
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
-    
+        assert response.json() == {"detail": f"Molecule with id "
+                                             f"{mol_id} not found."}

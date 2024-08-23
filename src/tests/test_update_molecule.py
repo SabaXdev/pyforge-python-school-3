@@ -1,7 +1,6 @@
 import pytest
-from rdkit import Chem
 from fastapi.testclient import TestClient
-from main import substructure_search, Molecule, app
+from main import Molecule, app
 
 
 @pytest.fixture
@@ -44,4 +43,5 @@ def test_update_molecule(client, molecules, mol_id, updated_molecule_data):
         assert updated_molecule == expected_data
 
     else:
-        assert response.json() == {"detail": f"Molecule with id {mol_id} not found."}
+        assert response.json() == {"detail": f"Molecule with id "
+                                             f"{mol_id} not found."}
