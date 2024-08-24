@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from main import app, get_db
 from models import Base
-import schemas  # Make sure to import your schemas module
 
 # Set up the SQLite database URL (using a file for tests)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"

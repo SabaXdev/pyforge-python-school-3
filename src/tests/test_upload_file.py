@@ -44,15 +44,16 @@ app.dependency_overrides[get_db] = override_get_db
 
 
 # Test for uploading a file and adding molecules
-@pytest.mark.parametrize("file_content, expected_status_code, "
-                         "expected_response", [
-    ("5 CH4\n6 CO\n", 200,  # Valid ID and SMILES format
-     {'content': 'Molecule/Molecules added successfully.'}
-     ),
-    ("invalid_id invalid_smiles", 400,  # Invalid ID and SMILES should
-     # result in a 400 Bad Request
-     {'detail': "invalid literal for int() with base 10: 'invalid_id'"})
-])
+@pytest.mark.parametrize(
+    "file_content, expected_status_code, expected_response", [
+        ("5 CH4\n6 CO\n", 200,  # Valid ID and SMILES format
+         {'content': 'Molecule/Molecules added successfully.'}
+         ),
+        ("invalid_id invalid_smiles", 400,  # Invalid ID and SMILES should
+         # result in a 400 Bad Request
+         {'detail': "invalid literal for int() with base 10: 'invalid_id'"})
+    ]
+)
 def test_upload_file(file_content, expected_status_code, expected_response,
                      db_session):
     # Simulate a file upload using FastAPI's UploadFile mechanism

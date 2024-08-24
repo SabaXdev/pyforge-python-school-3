@@ -1,7 +1,7 @@
 from rdkit import Chem
 from sqlalchemy.orm import Session
-
-import models, schemas
+import models
+import schemas
 
 
 def create_molecule(db: Session, molecule: schemas.MoleculeCreate):
@@ -51,14 +51,14 @@ def search_molecules(db: Session, substructure_smile: str):
     if not substructure:
         raise ValueError("Invalid substructure SMILES.")
 
-    return [smile for smile in smiles if Chem.MolFromSmiles(smile).
-    HasSubstructMatch(substructure)]
+    return [smile for smile in smiles if
+            Chem.MolFromSmiles(smile).HasSubstructMatch(substructure)]
 
 
 def add_molecules_from_file(db: Session, file_content: str):
     lines = file_content.splitlines()
-    existing_ids = {mol.mol_id for mol in db.query(models.Molecule.mol_id).
-    all()}
+    existing_ids = {mol.mol_id for mol in
+                    db.query(models.Molecule.mol_id).all()}
 
     for line in lines:
         parts = line.split()

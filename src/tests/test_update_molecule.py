@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from main import app, get_db
 from models import Base
-import schemas
 
 # Set up the SQLite database URL (using a file for tests)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
@@ -44,16 +43,22 @@ app.dependency_overrides[get_db] = override_get_db
 
 
 # Test for updating molecules
-@pytest.mark.parametrize("mol_id, update_data, expected_status_code, "
-                         "expected_response", [
-    (1, {"mol_id": 1, "name": "CH3OH"}, 200, {"mol_id": 1, "name": "CH3OH"}),
-    (2, {"mol_id": 2, "name": "C6H6"}, 200, {"mol_id": 2, "name": "C6H6"}),
-    (3, {"mol_id": 3, "name": "H2O"}, 200, {"mol_id": 3, "name": "H2O"}),
-    (4, {"mol_id": 4, "name": "CO2"}, 200, {"mol_id": 4, "name": "CO2"}),
-    (5, {"mol_id": 5, "name": "CH4"}, 404, {"detail": "Molecule not found"}),
-    (10, {"mol_id": 10, "name": "C4H10"}, 404,
-     {"detail": "Molecule not found"}),
-])
+@pytest.mark.parametrize(
+    "mol_id, update_data, expected_status_code, expected_response", [
+        (1, {"mol_id": 1, "name": "CH3OH"}, 200,
+         {"mol_id": 1, "name": "CH3OH"}),
+        (2, {"mol_id": 2, "name": "C6H6"}, 200,
+         {"mol_id": 2, "name": "C6H6"}),
+        (3, {"mol_id": 3, "name": "H2O"}, 200,
+         {"mol_id": 3, "name": "H2O"}),
+        (4, {"mol_id": 4, "name": "CO2"}, 200,
+         {"mol_id": 4, "name": "CO2"}),
+        (5, {"mol_id": 5, "name": "CH4"}, 404,
+         {"detail": "Molecule not found"}),
+        (10, {"mol_id": 10, "name": "C4H10"}, 404,
+         {"detail": "Molecule not found"}),
+    ]
+)
 def test_update_molecule(db_session, mol_id, update_data,
                          expected_status_code, expected_response):
     # Add initial molecules

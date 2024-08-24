@@ -6,14 +6,18 @@ from pydantic import BaseModel, Field, field_validator, ConfigDict
 class MoleculeBase(BaseModel):
     mol_id: int = Field(..., gt=0,
                         description="Unique ID for the molecules",
-                        json_schema_extra=
-                        {"value_error.number.not_gt"
-                         : "ID must be greater than 0"})
+                        json_schema_extra={
+                            "value_error.number.not_gt":
+                                "ID must be greater than 0"
+                        }
+                        )
     name: str = Field(
         ..., min_length=1, max_length=100,
         description="Structure of chemical molecules(SMILES)",
-        json_schema_extra={"value_error.any_str.min_length"
-                           : "SMILES must be at least 1 character long"}
+        json_schema_extra={
+            "value_error.any_str.min_length":
+                "SMILES must be at least 1 character long"
+        }
     )
     description: Optional[str] = (
         Field(None, max_length=255,
