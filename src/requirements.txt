@@ -51,7 +51,6 @@ pytest
 python-dateutil
 python-multipart
 pytz
-pywin32
 pyzmq
 rdkit
 reportlab
