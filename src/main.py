@@ -50,7 +50,8 @@ def get_server():
 
 
 @app.post("/molecules/{mol_id}", status_code=201)
-def add_molecule(molecule: schemas.MoleculeCreate, db: Session = Depends(get_db)):
+def add_molecule(molecule: schemas.MoleculeCreate,
+                 db: Session = Depends(get_db)):
     # Add Molecule object into the molecules
     return crud.create_molecule(db=db, molecule=molecule)
 
@@ -64,14 +65,17 @@ def retrieve_molecule(mol_id: int, db: Session = Depends(get_db)):
 
 
 @app.put("/molecules/{mol_id}", response_model=schemas.Molecule)
-def update_molecule(mol_id: int, molecule: schemas.MoleculeCreate, db: Session = Depends(get_db)):
-    db_molecule = crud.update_molecule_by_id(db=db, molecule_id=mol_id, updated_molecule=molecule)
+def update_molecule(mol_id: int, molecule: schemas.MoleculeCreate,
+                    db: Session = Depends(get_db)):
+    db_molecule = crud.update_molecule_by_id(db=db, molecule_id=mol_id,
+                                             updated_molecule=molecule)
     if db_molecule is None:
         raise HTTPException(status_code=404, detail="Molecule not found")
     return db_molecule
 
 
-@app.delete("/molecules/{mol_id}", response_model=schemas.Molecule, status_code=200)
+@app.delete("/molecules/{mol_id}", response_model=schemas.Molecule,
+            status_code=200)
 def delete_molecule(mol_id: int, db: Session = Depends(get_db)):
     db_molecule = crud.delete_molecule_by_id(db=db, molecule_id=mol_id)
     if db_molecule is None:
@@ -80,7 +84,8 @@ def delete_molecule(mol_id: int, db: Session = Depends(get_db)):
 
 
 @app.get("/molecules")
-def retrieve_molecules(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def retrieve_molecules(skip: int = 0, limit: int = 100,
+                       db: Session = Depends(get_db)):
     return crud.get_all_molecules(db=db, skip=skip, limit=limit)
 
 

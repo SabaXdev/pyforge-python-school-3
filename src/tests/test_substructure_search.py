@@ -10,8 +10,10 @@ import schemas  # Make sure to import your schemas module
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
 
 # Create the engine and session for the test
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
 
 # Create a new test client for FastAPI
 client = TestClient(app)
@@ -43,12 +45,13 @@ app.dependency_overrides[get_db] = override_get_db
 
 # Test for searching molecules by substructure SMILES
 @pytest.mark.parametrize("substructure_smile, expected_result", [
-    ("CC", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),  # Match all molecules containing "CC"
-    ("c1ccccc1", ["c1ccccc1", "CC(=O)Oc1ccccc1C(=O)O"]),  # Match benzene ring molecules
-    ("O", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),  # Match molecules containing Oxygen
+    ("CC", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),
+    ("c1ccccc1", ["c1ccccc1", "CC(=O)Oc1ccccc1C(=O)O"]),
+    ("O", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),
     ("P", []),  # No molecules containing Phosphorus
 ])
-def test_search_molecules_by_smile(substructure_smile, expected_result, db_session):
+def test_search_molecules_by_smile(substructure_smile, expected_result,
+                                   db_session):
     # Add initial molecules
     initial_molecules = [
         {"mol_id": 1, "name": "CCO"},

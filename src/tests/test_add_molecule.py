@@ -9,8 +9,10 @@ from models import Base
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
 
 # Create the engine and session for the test
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
 
 # Create a new test client for FastAPI
 client = TestClient(app)
@@ -46,7 +48,8 @@ app.dependency_overrides[get_db] = override_get_db
     {"mol_id": 6, "name": "CO"}
 ])
 def test_add_molecule(molecule_data, db_session):
-    response = client.post(f"/molecules/{molecule_data['mol_id']}", json=molecule_data)
+    response = client.post(f"/molecules/{molecule_data['mol_id']}",
+                           json=molecule_data)
     assert response.status_code == 201
 
     # Extract only the relevant fields from the response and compare them

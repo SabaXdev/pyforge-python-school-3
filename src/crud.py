@@ -13,11 +13,14 @@ def create_molecule(db: Session, molecule: schemas.MoleculeCreate):
 
 
 def get_molecule_by_id(db: Session, molecule_id: int):
-    return db.query(models.Molecule).filter(models.Molecule.mol_id == molecule_id).first()
+    return (db.query(models.Molecule).
+            filter(models.Molecule.mol_id == molecule_id).first())
 
 
-def update_molecule_by_id(db: Session, molecule_id: int, updated_molecule: schemas.MoleculeCreate):
-    db_molecule = db.query(models.Molecule).filter(models.Molecule.mol_id == molecule_id).first()
+def update_molecule_by_id(db: Session, molecule_id: int,
+                          updated_molecule: schemas.MoleculeCreate):
+    db_molecule = db.query(models.Molecule).filter(models.Molecule.mol_id ==
+                                                   molecule_id).first()
     if db_molecule:
         db_molecule.name = updated_molecule.name
         db.commit()
@@ -27,7 +30,8 @@ def update_molecule_by_id(db: Session, molecule_id: int, updated_molecule: schem
 
 
 def delete_molecule_by_id(db: Session, molecule_id: int):
-    db_molecule = db.query(models.Molecule).filter(models.Molecule.mol_id == molecule_id).first()
+    db_molecule = db.query(models.Molecule).filter(models.Molecule.mol_id ==
+                                                   molecule_id).first()
     if db_molecule:
         db.delete(db_molecule)
         db.commit()
@@ -47,12 +51,14 @@ def search_molecules(db: Session, substructure_smile: str):
     if not substructure:
         raise ValueError("Invalid substructure SMILES.")
 
-    return [smile for smile in smiles if Chem.MolFromSmiles(smile).HasSubstructMatch(substructure)]
+    return [smile for smile in smiles if Chem.MolFromSmiles(smile).
+    HasSubstructMatch(substructure)]
 
 
 def add_molecules_from_file(db: Session, file_content: str):
     lines = file_content.splitlines()
-    existing_ids = {mol.mol_id for mol in db.query(models.Molecule.mol_id).all()}
+    existing_ids = {mol.mol_id for mol in db.query(models.Molecule.mol_id).
+    all()}
 
     for line in lines:
         parts = line.split()

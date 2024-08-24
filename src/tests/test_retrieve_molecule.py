@@ -10,8 +10,10 @@ import schemas  # Make sure to import your schemas module
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
 
 # Create the engine and session for the test
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
 
 # Create a new test client for FastAPI
 client = TestClient(app)
@@ -50,11 +52,14 @@ app.dependency_overrides[get_db] = override_get_db
     (5, 404, {"detail": "Molecule not found"}),
     (10, 404, {"detail": "Molecule not found"})
 ])
-def test_retrieve_molecule(mol_id, expected_status_code, expected_response, db_session):
+def test_retrieve_molecule(mol_id, expected_status_code, expected_response,
+                           db_session):
     # Insert test data if needed
-    if mol_id in [1, 2, 3, 4]:  # Only insert molecules that should be retrievable
+    if mol_id in [1, 2, 3, 4]:  # Only insert molecules that should be
+        # retrievable
         db_session.execute(
-            text("INSERT INTO molecules (mol_id, name) VALUES (:mol_id, :name)"),
+            text("INSERT INTO molecules (mol_id, name) "
+                 "VALUES (:mol_id, :name)"),
             {"mol_id": mol_id, "name": expected_response["name"]}
         )
         db_session.commit()

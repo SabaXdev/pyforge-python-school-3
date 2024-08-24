@@ -10,8 +10,10 @@ import schemas  # Make sure to import your schemas module
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
 
 # Create the engine and session for the test
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
 
 # Create a new test client for FastAPI
 client = TestClient(app)
