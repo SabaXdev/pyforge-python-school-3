@@ -26,6 +26,9 @@ jobs:
         pip install -r requirements.txt
         pip install pytest flake8
 
+    - name: Check Installed Packages
+      run: pip freeze
+
     - name: Run tests
       run: |
         pytest
