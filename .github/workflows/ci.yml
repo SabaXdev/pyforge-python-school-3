@@ -2,9 +2,9 @@ name: Python CI
 
 on:
   push:
-    branches: [ main, continuous-integration ]
+    branches: [ main, continuous-integration, hw8-database ]
   pull_request:
-    branches: [ main, continuous-integration ]
+    branches: [ main, continuous-integration, hw8-database]
 
 jobs:
   build:
