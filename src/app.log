@@ -1356,3 +1356,6 @@
 2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=99
 2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=100
 2024-08-29 10:43:27,638 - crud - INFO - Yielded a total of 100 molecules
+2024-08-29 11:20:39,813 - main - INFO - Fetching server ID
+2024-08-29 11:20:58,233 - root - INFO - Validating SMILES: CCC
+2024-08-29 11:20:58,268 - crud - INFO - Creating molecule with ID 1 and name CCC

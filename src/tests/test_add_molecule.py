@@ -4,8 +4,8 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from src.main import app, get_db
-from src.models import Base
+from main import app, get_db
+from models import Base
 
 # Set up logging
 logger = logging.getLogger(__name__)
