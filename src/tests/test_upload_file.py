@@ -101,6 +101,6 @@ def test_upload_file_invalid_content(db_session):
 
     # Check that the response returns a 400 status code
     assert response.status_code == 400
-    assert response.json() == {"detail": "Invalid file format"}
+    assert response.json() == {"detail": "Invalid file format. Must contain at least mol_id and name."}
 
     logger.info(f"Completed test")
