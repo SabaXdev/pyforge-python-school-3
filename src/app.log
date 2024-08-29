@@ -1,0 +1,1358 @@
+2024-08-25 10:42:53,326 - main - INFO - Fetching server ID
+2024-08-25 10:43:13,710 - main - INFO - Fetching server ID
+2024-08-25 10:43:59,308 - main - INFO - Fetching server ID
+2024-08-25 10:43:59,759 - main - INFO - Fetching server ID
+2024-08-25 10:44:00,277 - main - INFO - Fetching server ID
+2024-08-25 10:44:00,733 - main - INFO - Fetching server ID
+2024-08-25 10:44:30,106 - main - INFO - Adding molecule: CO with ID 1
+2024-08-25 10:44:53,836 - main - INFO - Adding molecule: CO with ID 10
+2024-08-25 10:45:42,825 - main - INFO - Retrieving molecule with ID 1
+2024-08-25 10:45:51,813 - main - INFO - Retrieving molecule with ID 100
+2024-08-25 10:45:51,815 - main - WARNING - Molecule with ID 100 not found
+2024-08-25 10:45:57,676 - main - INFO - Retrieving molecule with ID 10
+2024-08-25 10:46:44,318 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:48:24,235 - main - INFO - Updating molecule with ID 1
+2024-08-25 10:48:24,266 - main - INFO - Molecule with ID 1 successfully updated
+2024-08-25 10:48:28,264 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:49:25,230 - main - INFO - Updating molecule with ID 10
+2024-08-25 10:49:25,238 - main - INFO - Molecule with ID 10 successfully updated
+2024-08-25 10:49:30,856 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:51:02,268 - main - INFO - Attempting to delete molecule with ID 1
+2024-08-25 10:51:02,274 - main - INFO - Molecule with ID 1 successfully deleted
+2024-08-25 10:51:06,313 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:51:18,454 - main - INFO - Attempting to delete molecule with ID 110
+2024-08-25 10:51:18,454 - main - WARNING - Molecule with ID 110 not found for deletion
+2024-08-25 10:51:39,131 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:55:56,128 - main - INFO - Adding molecule: LL with ID 1
+2024-08-25 10:56:34,594 - main - INFO - Adding molecule: unknown with ID 1
+2024-08-25 10:57:00,501 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 10:57:05,453 - main - INFO - Adding molecule: unknown with ID 2
+2024-08-25 10:59:08,789 - root - INFO - Validating SMILES: unknown
+2024-08-25 10:59:08,790 - main - INFO - Adding molecule: unknown with ID 3
+2024-08-25 11:00:44,397 - root - INFO - Validating SMILES: unknown
+2024-08-25 11:01:58,700 - root - INFO - Validating SMILES: H
+2024-08-25 11:02:04,923 - root - INFO - Validating SMILES: P
+2024-08-25 11:02:04,966 - main - INFO - Adding molecule: P with ID 4
+2024-08-25 11:22:48,837 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:23:18,692 - main - INFO - Attempting to delete molecule with ID 1
+2024-08-25 11:23:18,733 - main - INFO - Molecule with ID 1 successfully deleted
+2024-08-25 11:23:18,758 - root - INFO - Validating SMILES: LL
+2024-08-25 11:23:25,047 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:23:41,712 - main - INFO - Attempting to delete molecule with ID 2
+2024-08-25 11:23:41,718 - main - INFO - Molecule with ID 2 successfully deleted
+2024-08-25 11:23:41,719 - root - INFO - Validating SMILES: unknown
+2024-08-25 11:23:49,869 - main - INFO - Attempting to delete molecule with ID 3
+2024-08-25 11:23:49,875 - main - INFO - Molecule with ID 3 successfully deleted
+2024-08-25 11:23:49,876 - root - INFO - Validating SMILES: unknown
+2024-08-25 11:23:53,342 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:23:58,663 - main - INFO - Attempting to delete molecule with ID 4
+2024-08-25 11:23:58,669 - main - INFO - Molecule with ID 4 successfully deleted
+2024-08-25 11:23:58,670 - root - INFO - Validating SMILES: P
+2024-08-25 11:26:11,676 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:27:44,795 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:28:04,747 - root - INFO - Validating SMILES: c1ccccc1
+2024-08-25 11:28:04,761 - main - INFO - Adding molecule: c1ccccc1 with ID 1
+2024-08-25 11:28:13,497 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:31:41,134 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:34:44,190 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:34:50,452 - root - INFO - Validating SMILES: c1ccccc1
+2024-08-25 11:34:50,467 - main - INFO - Adding molecule: c1ccccc1 with ID 1
+2024-08-25 11:34:52,764 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:36:02,009 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:36:04,249 - root - INFO - Validating SMILES: c1ccccc1
+2024-08-25 11:36:04,264 - main - INFO - Adding molecule: c1ccccc1 with ID 1
+2024-08-25 11:36:06,610 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:36:25,253 - root - INFO - Validating SMILES: P
+2024-08-25 11:36:25,253 - main - INFO - Adding molecule: P with ID 2
+2024-08-25 11:36:28,384 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:37:17,612 - root - INFO - Validating SMILES: CCO
+2024-08-25 11:37:17,614 - main - INFO - Adding molecule: CCO with ID 3
+2024-08-25 11:37:29,598 - root - INFO - Validating SMILES: CC(=O)O
+2024-08-25 11:37:29,598 - main - INFO - Adding molecule: CC(=O)O with ID 5
+2024-08-25 11:37:31,702 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:38:19,549 - main - INFO - Searching for molecules with substructure: CC
+2024-08-25 11:38:19,567 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:38:20,632 - main - INFO - Searching for molecules with substructure: CC
+2024-08-25 11:38:20,634 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:38:31,983 - main - INFO - Searching for molecules with substructure: a
+2024-08-25 11:38:31,988 - main - ERROR - Search failed: Invalid substructure SMILES.
+2024-08-25 11:38:36,773 - main - INFO - Searching for molecules with substructure: P
+2024-08-25 11:38:36,774 - main - INFO - Search completed, found 1 matches
+2024-08-25 11:39:07,703 - main - INFO - Searching for molecules with substructure: O
+2024-08-25 11:39:07,704 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:40:45,820 - main - INFO - File uploaded for processing
+2024-08-25 11:40:45,822 - main - ERROR - File processing error: Invalid file format
+2024-08-25 11:42:21,455 - main - INFO - File uploaded for processing
+2024-08-25 11:42:21,457 - crud - INFO - Adding molecule CC(=O)Oc1ccccc1C(=O)O with ID 100
+2024-08-25 11:42:59,129 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:43:50,411 - root - INFO - Validating SMILES: CH4
+2024-08-25 11:44:01,354 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:44:13,998 - root - INFO - Validating SMILES: CO
+2024-08-25 11:44:13,998 - main - INFO - Adding molecule: CO with ID 6
+2024-08-25 11:46:44,026 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:46:53,135 - main - INFO - Attempting to delete molecule with ID 6
+2024-08-25 11:46:53,143 - main - INFO - Molecule with ID 6 successfully deleted
+2024-08-25 11:46:53,145 - root - INFO - Validating SMILES: CO
+2024-08-25 11:46:55,044 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:47:05,229 - root - INFO - Validating SMILES: CO
+2024-08-25 11:47:05,230 - main - INFO - Adding molecule: CO with ID 6
+2024-08-25 11:47:19,609 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:47:54,388 - main - INFO - Clearing all molecules from the database
+2024-08-25 11:48:01,814 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:48:09,324 - root - INFO - Validating SMILES: CO
+2024-08-25 11:48:09,324 - main - INFO - Adding molecule: CO with ID 1
+2024-08-25 11:48:11,792 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:50:49,442 - root - INFO - Validating SMILES: CCO
+2024-08-25 11:50:49,458 - main - INFO - Adding molecule: CCO with ID 2
+2024-08-25 11:50:49,458 - crud - INFO - Creating molecule with ID 2 and name CCO
+2024-08-25 11:50:49,469 - crud - INFO - Molecule created successfully: <models.Molecule object at 0x000002314D8352B0>
+2024-08-25 11:51:46,532 - root - INFO - Validating SMILES: P
+2024-08-25 11:51:46,548 - main - INFO - Adding molecule: P with ID 3
+2024-08-25 11:51:46,548 - crud - INFO - Creating molecule with ID 3 and name P
+2024-08-25 11:51:46,558 - crud - INFO - Molecule created successfully: P
+2024-08-25 11:52:03,411 - main - INFO - Retrieving molecule with ID 1
+2024-08-25 11:52:03,411 - crud - INFO - Fetching molecule with ID 1
+2024-08-25 11:52:03,413 - crud - INFO - Molecule found: <models.Molecule object at 0x000001F9BD924BC0>
+2024-08-25 11:52:03,414 - root - INFO - Validating SMILES: CO
+2024-08-25 11:52:28,664 - main - INFO - Retrieving molecule with ID 1
+2024-08-25 11:52:28,664 - crud - INFO - Fetching molecule with ID 1
+2024-08-25 11:52:28,668 - crud - INFO - Molecule found: CO
+2024-08-25 11:52:28,669 - root - INFO - Validating SMILES: CO
+2024-08-25 11:52:42,112 - main - INFO - Retrieving molecule with ID 1000
+2024-08-25 11:52:42,112 - crud - INFO - Fetching molecule with ID 1000
+2024-08-25 11:52:42,113 - crud - WARNING - Molecule with ID 1000 not found
+2024-08-25 11:52:42,113 - main - WARNING - Molecule with ID 1000 not found
+2024-08-25 11:53:21,568 - main - INFO - Retrieving molecule with ID 1000
+2024-08-25 11:53:21,568 - crud - INFO - Fetching molecule with ID 1000
+2024-08-25 11:53:21,574 - main - WARNING - Molecule with ID 1000 not found
+2024-08-25 11:53:41,831 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:53:41,832 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-25 11:53:41,833 - crud - INFO - Fetched 3 molecules
+2024-08-25 11:54:01,940 - root - INFO - Validating SMILES: H
+2024-08-25 11:54:09,951 - root - INFO - Validating SMILES: O
+2024-08-25 11:54:09,966 - main - INFO - Updating molecule with ID 2
+2024-08-25 11:54:09,967 - crud - INFO - Updating molecule with ID 2
+2024-08-25 11:54:09,978 - crud - INFO - Molecule updated successfully: <models.Molecule object at 0x0000020E8AB7EF90>
+2024-08-25 11:54:09,978 - main - INFO - Molecule with ID 2 successfully updated
+2024-08-25 11:54:09,979 - root - INFO - Validating SMILES: O
+2024-08-25 11:55:03,868 - root - INFO - Validating SMILES: O
+2024-08-25 11:55:03,883 - main - INFO - Updating molecule with ID 2
+2024-08-25 11:55:03,888 - main - INFO - Molecule with ID 2 successfully updated
+2024-08-25 11:55:03,889 - root - INFO - Validating SMILES: O
+2024-08-25 11:55:16,968 - root - INFO - Validating SMILES: O
+2024-08-25 11:55:16,969 - main - INFO - Updating molecule with ID 20
+2024-08-25 11:55:16,970 - crud - WARNING - Molecule with ID 20 not found for update
+2024-08-25 11:55:16,970 - main - WARNING - Molecule with ID 20 not found for update
+2024-08-25 11:55:38,980 - root - INFO - Validating SMILES: O
+2024-08-25 11:55:38,996 - main - INFO - Updating molecule with ID 20
+2024-08-25 11:55:38,999 - main - WARNING - Molecule with ID 20 not found for update
+2024-08-25 11:56:00,579 - main - INFO - Attempting to delete molecule with ID 30
+2024-08-25 11:56:00,580 - crud - INFO - Deleting molecule with ID 30
+2024-08-25 11:56:00,581 - crud - WARNING - Molecule with ID 30 not found for deletion
+2024-08-25 11:56:00,581 - main - WARNING - Molecule with ID 30 not found for deletion
+2024-08-25 11:56:19,119 - main - INFO - Attempting to delete molecule with ID 3
+2024-08-25 11:56:19,119 - crud - INFO - Deleting molecule with ID 3
+2024-08-25 11:56:19,130 - main - INFO - Molecule with ID 3 successfully deleted
+2024-08-25 11:56:19,131 - root - INFO - Validating SMILES: P
+2024-08-25 11:56:21,752 - main - INFO - Retrieving molecules, skip=0, limit=100
+2024-08-25 11:56:21,752 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-25 11:56:21,753 - crud - INFO - Fetched 2 molecules
+2024-08-25 11:56:50,943 - main - INFO - Searching for molecules with substructure: O
+2024-08-25 11:56:50,952 - crud - INFO - Searching molecules for substructure SMILES: O
+2024-08-25 11:56:50,954 - crud - INFO - Found 2 matching molecules
+2024-08-25 11:56:50,954 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:57:16,981 - main - INFO - Searching for molecules with substructure: O
+2024-08-25 11:57:16,981 - crud - INFO - Searching molecules for substructure SMILES: O
+2024-08-25 11:57:16,982 - crud - INFO - Found 2 matching molecules
+2024-08-25 11:57:16,983 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:57:35,799 - main - INFO - Searching for molecules with substructure: O
+2024-08-25 11:57:35,821 - main - INFO - Search completed, found 2 matches
+2024-08-25 11:57:41,881 - main - INFO - Searching for molecules with substructure: Op
+2024-08-25 11:57:41,925 - crud - ERROR - Invalid substructure SMILES: Op
+2024-08-25 11:57:41,925 - main - ERROR - Search failed: Invalid substructure SMILES.
+2024-08-25 11:57:49,307 - main - INFO - Searching for molecules with substructure: P
+2024-08-25 11:57:49,309 - main - INFO - Search completed, found 0 matches
+2024-08-25 11:59:23,669 - main - INFO - File uploaded for processing
+2024-08-25 11:59:23,672 - crud - INFO - Adding molecule CC(=O)Oc1ccccc1C(=O)O with ID 100
+2024-08-25 11:59:23,680 - crud - INFO - Molecule/Molecules added successfully.
+2024-08-25 12:00:34,921 - main - INFO - File uploaded for processing
+2024-08-25 12:00:34,924 - crud - INFO - Adding molecule CC(=O)Oc1ccccc1C(=O)O with ID 101
+2024-08-25 12:00:34,932 - crud - INFO - Molecule/Molecules added successfully.
+2024-08-26 10:15:40,377 - root - INFO - Validating SMILES: P
+2024-08-26 10:15:40,391 - crud - INFO - Creating molecule with ID 10 and name P
+2024-08-26 10:15:40,403 - crud - INFO - Molecule created successfully: P
+2024-08-26 10:43:56,439 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-26 10:43:56,442 - crud - INFO - Fetched 5 molecules
+2024-08-26 10:44:25,445 - main - INFO - Searching for molecules with substructure: C
+2024-08-26 10:44:25,468 - main - INFO - Search completed, found 3 matches
+2024-08-26 10:45:29,533 - main - INFO - Searching for molecules with substructure: C
+2024-08-26 10:45:29,557 - main - INFO - Search completed, found 3 matches: ['CC(=O)Oc1ccccc1C(=O)O', 'CC(=O)Oc1ccccc1C(=O)O', 'CO']
+2024-08-28 10:43:58,091 - main - INFO - Fetching server ID
+2024-08-28 10:44:14,044 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 10:44:14,044 - crud - INFO - Fetched 5 molecules
+2024-08-28 10:45:12,321 - main - INFO - Searching for molecules with substructure: O
+2024-08-28 10:45:12,360 - main - INFO - Search completed, found 4 matches: ['CC(=O)Oc1ccccc1C(=O)O', 'CC(=O)Oc1ccccc1C(=O)O', 'CO', 'O']
+2024-08-28 11:01:11,576 - main - INFO - Fetching server ID
+2024-08-28 11:01:23,463 - main - INFO - Clearing all molecules from the database
+2024-08-28 11:01:23,463 - crud - INFO - Clearing all molecules from the database
+2024-08-28 11:01:23,485 - crud - INFO - All molecules cleared successfully.
+2024-08-28 11:01:30,938 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 11:01:30,941 - crud - INFO - Fetched 0 molecules
+2024-08-28 11:01:51,609 - main - INFO - File uploaded for processing
+2024-08-28 11:01:51,609 - crud - ERROR - Invalid file format: 1 C1CC1 molecule_1
+2024-08-28 11:01:51,609 - main - ERROR - File processing error: Invalid file format
+2024-08-28 11:06:27,052 - main - INFO - File uploaded for processing
+2024-08-28 11:06:27,061 - crud - INFO - Adding molecule C1CC1 with ID 1
+2024-08-28 11:06:27,061 - crud - INFO - Adding molecule NCCO with ID 2
+2024-08-28 11:06:27,061 - crud - INFO - Adding molecule CCC(C)O with ID 3
+2024-08-28 11:06:27,062 - crud - INFO - Adding molecule NCCO with ID 4
+2024-08-28 11:06:27,062 - crud - INFO - Adding molecule CC(C)O with ID 5
+2024-08-28 11:06:27,062 - crud - INFO - Adding molecule CC with ID 6
+2024-08-28 11:06:27,063 - crud - INFO - Adding molecule C1CCC1O with ID 7
+2024-08-28 11:06:27,063 - crud - INFO - Adding molecule C=O with ID 8
+2024-08-28 11:06:27,063 - crud - INFO - Adding molecule COC with ID 9
+2024-08-28 11:06:27,064 - crud - INFO - Adding molecule C1=CC=CC=C1O with ID 10
+2024-08-28 11:06:27,064 - crud - INFO - Adding molecule CCCCN with ID 11
+2024-08-28 11:06:27,065 - crud - INFO - Adding molecule CCOCC with ID 12
+2024-08-28 11:06:27,065 - crud - INFO - Adding molecule CC(C)O with ID 13
+2024-08-28 11:06:27,066 - crud - INFO - Adding molecule C1=CC=CC=C1 with ID 14
+2024-08-28 11:06:27,066 - crud - INFO - Adding molecule C1COC1 with ID 15
+2024-08-28 11:06:27,067 - crud - INFO - Adding molecule C=O with ID 16
+2024-08-28 11:06:27,068 - crud - INFO - Adding molecule CCC with ID 17
+2024-08-28 11:06:27,068 - crud - INFO - Adding molecule C1COC1 with ID 18
+2024-08-28 11:06:27,069 - crud - INFO - Adding molecule O=C1C=CC=C1 with ID 19
+2024-08-28 11:06:27,069 - crud - INFO - Adding molecule CCN with ID 20
+2024-08-28 11:06:27,069 - crud - INFO - Adding molecule C1CC2CCC1C2 with ID 21
+2024-08-28 11:06:27,070 - crud - INFO - Adding molecule C1CC1 with ID 22
+2024-08-28 11:06:27,070 - crud - INFO - Adding molecule C1CC1 with ID 23
+2024-08-28 11:06:27,070 - crud - INFO - Adding molecule O=CCC with ID 24
+2024-08-28 11:06:27,070 - crud - INFO - Adding molecule C=O with ID 25
+2024-08-28 11:06:27,071 - crud - INFO - Adding molecule CCS with ID 26
+2024-08-28 11:06:27,071 - crud - INFO - Adding molecule N=C=O with ID 27
+2024-08-28 11:06:27,071 - crud - INFO - Adding molecule CCCC with ID 28
+2024-08-28 11:06:27,071 - crud - INFO - Adding molecule N#CC with ID 29
+2024-08-28 11:06:27,072 - crud - INFO - Adding molecule O with ID 30
+2024-08-28 11:06:27,072 - crud - INFO - Adding molecule CCC(C)O with ID 31
+2024-08-28 11:06:27,072 - crud - INFO - Adding molecule N=C=O with ID 32
+2024-08-28 11:06:27,073 - crud - INFO - Adding molecule C=O with ID 33
+2024-08-28 11:06:27,073 - crud - INFO - Adding molecule CCOO with ID 34
+2024-08-28 11:06:27,073 - crud - INFO - Adding molecule O=C1C=CC=C1 with ID 35
+2024-08-28 11:06:27,073 - crud - INFO - Adding molecule O=C=O with ID 36
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule C1COC1 with ID 37
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule NCCO with ID 38
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule C1CC1 with ID 39
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule C1=CC=C(C=C1)Cl with ID 40
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule C1CCC1N with ID 41
+2024-08-28 11:06:27,074 - crud - INFO - Adding molecule COC with ID 42
+2024-08-28 11:06:27,075 - crud - INFO - Adding molecule CCN with ID 43
+2024-08-28 11:06:27,075 - crud - INFO - Adding molecule C with ID 44
+2024-08-28 11:06:27,075 - crud - INFO - Adding molecule C1=CC=C(C=C1)Cl with ID 45
+2024-08-28 11:06:27,075 - crud - INFO - Adding molecule CCCC with ID 46
+2024-08-28 11:06:27,076 - crud - INFO - Adding molecule C#N with ID 47
+2024-08-28 11:06:27,076 - crud - INFO - Adding molecule CN with ID 48
+2024-08-28 11:06:27,076 - crud - INFO - Adding molecule COC with ID 49
+2024-08-28 11:06:27,076 - crud - INFO - Adding molecule CC(C)O with ID 50
+2024-08-28 11:06:27,077 - crud - INFO - Adding molecule C1CCC1N with ID 51
+2024-08-28 11:06:27,077 - crud - INFO - Adding molecule CCCC with ID 52
+2024-08-28 11:06:27,077 - crud - INFO - Adding molecule CNC with ID 53
+2024-08-28 11:06:27,077 - crud - INFO - Adding molecule CCO with ID 54
+2024-08-28 11:06:27,077 - crud - INFO - Adding molecule CO with ID 55
+2024-08-28 11:06:27,078 - crud - INFO - Adding molecule CC(=O)O with ID 56
+2024-08-28 11:06:27,078 - crud - INFO - Adding molecule NCCO with ID 57
+2024-08-28 11:06:27,078 - crud - INFO - Adding molecule CCCC with ID 58
+2024-08-28 11:06:27,078 - crud - INFO - Adding molecule CCO with ID 59
+2024-08-28 11:06:27,079 - crud - INFO - Adding molecule CCCl with ID 60
+2024-08-28 11:06:27,079 - crud - INFO - Adding molecule CCC with ID 61
+2024-08-28 11:06:27,079 - crud - INFO - Adding molecule CO with ID 62
+2024-08-28 11:06:27,079 - crud - INFO - Adding molecule C1CNCCN1 with ID 63
+2024-08-28 11:06:27,080 - crud - INFO - Adding molecule CCC with ID 64
+2024-08-28 11:06:27,080 - crud - INFO - Adding molecule C1CCC1O with ID 65
+2024-08-28 11:06:27,080 - crud - INFO - Adding molecule C1CC1 with ID 66
+2024-08-28 11:06:27,080 - crud - INFO - Adding molecule CCC with ID 67
+2024-08-28 11:06:27,081 - crud - INFO - Adding molecule CNC with ID 68
+2024-08-28 11:06:27,081 - crud - INFO - Adding molecule CN with ID 69
+2024-08-28 11:06:27,081 - crud - INFO - Adding molecule CCOCC with ID 70
+2024-08-28 11:06:27,082 - crud - INFO - Adding molecule O with ID 71
+2024-08-28 11:06:27,083 - crud - INFO - Adding molecule CN with ID 72
+2024-08-28 11:06:27,084 - crud - INFO - Adding molecule COO with ID 73
+2024-08-28 11:06:27,084 - crud - INFO - Adding molecule O=CCC with ID 74
+2024-08-28 11:06:27,085 - crud - INFO - Adding molecule C#N with ID 75
+2024-08-28 11:06:27,086 - crud - INFO - Adding molecule CO with ID 76
+2024-08-28 11:06:27,086 - crud - INFO - Adding molecule CCC with ID 77
+2024-08-28 11:06:27,086 - crud - INFO - Adding molecule C1CC1N with ID 78
+2024-08-28 11:06:27,087 - crud - INFO - Adding molecule CCN with ID 79
+2024-08-28 11:06:27,087 - crud - INFO - Adding molecule O=C1C=CC=C1 with ID 80
+2024-08-28 11:06:27,088 - crud - INFO - Adding molecule C1CC2CCC1C2 with ID 81
+2024-08-28 11:06:27,088 - crud - INFO - Adding molecule O=CCC with ID 82
+2024-08-28 11:06:27,089 - crud - INFO - Adding molecule CO with ID 83
+2024-08-28 11:06:27,089 - crud - INFO - Adding molecule CCCC with ID 84
+2024-08-28 11:06:27,090 - crud - INFO - Adding molecule CCCOC with ID 85
+2024-08-28 11:06:27,090 - crud - INFO - Adding molecule CCCl with ID 86
+2024-08-28 11:06:27,090 - crud - INFO - Adding molecule C1CCC1F with ID 87
+2024-08-28 11:06:27,091 - crud - INFO - Adding molecule CCC with ID 88
+2024-08-28 11:06:27,091 - crud - INFO - Adding molecule C1CC1N with ID 89
+2024-08-28 11:06:27,092 - crud - INFO - Adding molecule CC(Cl)CO with ID 90
+2024-08-28 11:06:27,092 - crud - INFO - Adding molecule C1=CC=C(C=C1)O with ID 91
+2024-08-28 11:06:27,092 - crud - INFO - Adding molecule COC with ID 92
+2024-08-28 11:06:27,092 - crud - INFO - Adding molecule CNC with ID 93
+2024-08-28 11:06:27,093 - crud - INFO - Adding molecule N=C=O with ID 94
+2024-08-28 11:06:27,093 - crud - INFO - Adding molecule C1CC1 with ID 95
+2024-08-28 11:06:27,093 - crud - INFO - Adding molecule CCCl with ID 96
+2024-08-28 11:06:27,093 - crud - INFO - Adding molecule C#N with ID 97
+2024-08-28 11:06:27,094 - crud - INFO - Adding molecule CCOCC with ID 98
+2024-08-28 11:06:27,094 - crud - INFO - Adding molecule O=C(O)CC with ID 99
+2024-08-28 11:06:27,094 - crud - INFO - Adding molecule CC(C)O with ID 100
+2024-08-28 11:06:27,094 - crud - INFO - Adding molecule CBr with ID 101
+2024-08-28 11:06:27,094 - crud - INFO - Adding molecule C1CC2CCC1C2 with ID 102
+2024-08-28 11:06:27,095 - crud - INFO - Adding molecule O=CCC with ID 103
+2024-08-28 11:06:27,095 - crud - INFO - Adding molecule COO with ID 104
+2024-08-28 11:06:27,095 - crud - INFO - Adding molecule CCOCC with ID 105
+2024-08-28 11:06:27,114 - crud - INFO - Molecule/Molecules added successfully.
+2024-08-28 11:07:02,990 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 11:07:02,995 - crud - INFO - Fetched 100 molecules
+2024-08-28 11:57:45,726 - main - INFO - Fetching server ID
+2024-08-28 11:58:08,626 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 11:58:08,655 - crud - INFO - Fetched 100 molecules
+2024-08-28 12:01:08,066 - main - INFO - Searching for molecules with substructure: CO
+2024-08-28 12:01:08,160 - main - INFO - Search completed, found 38 matches: ['C1=CC=C(C=C1)O', 'C1=CC=CC=C1O', 'C1CCC1O', 'C1CCC1O', 'C1COC1', 'C1COC1', 'C1COC1', 'CC(=O)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(Cl)CO', 'CCC(C)O', 'CCC(C)O', 'CCCOC', 'CCO', 'CCO', 'CCOCC', 'CCOCC', 'CCOCC', 'CCOCC', 'CCOO', 'CO', 'CO', 'CO', 'CO', 'COC', 'COC', 'COC', 'COC', 'COO', 'COO', 'NCCO', 'NCCO', 'NCCO', 'NCCO', 'O=C(O)CC']
+2024-08-28 12:02:47,897 - main - INFO - Retrieving molecule with ID 50
+2024-08-28 12:02:47,898 - crud - INFO - Fetching molecule with ID 50
+2024-08-28 12:02:47,910 - crud - INFO - Molecule found: CC(C)O
+2024-08-28 12:02:47,913 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:36:05,497 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 13:36:05,512 - crud - INFO - Fetched 100 molecules
+2024-08-28 13:37:09,469 - root - INFO - Validating SMILES: CC(=O)Oc1ccccc1C(=O)O
+2024-08-28 13:37:09,540 - crud - INFO - Creating molecule with ID 101 and name CC(=O)Oc1ccccc1C(=O)O
+2024-08-28 13:37:42,205 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 13:37:42,212 - crud - INFO - Fetched 100 molecules
+2024-08-28 13:38:51,967 - crud - INFO - Fetching all molecules with skip=0 and limit=150
+2024-08-28 13:38:51,978 - crud - INFO - Fetched 105 molecules
+2024-08-28 13:49:36,266 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 13:49:36,280 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-28 13:49:36,281 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-28 13:49:36,281 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-28 13:49:36,282 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-28 13:49:36,282 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-28 13:49:36,282 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-28 13:49:36,283 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-28 13:49:36,284 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-28 13:49:36,284 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-28 13:49:36,285 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-28 13:49:36,286 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-28 13:49:36,286 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-28 13:49:36,287 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-28 13:49:36,287 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-28 13:49:36,288 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-28 13:49:36,288 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-28 13:49:36,288 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-28 13:49:36,289 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-28 13:49:36,290 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-28 13:49:36,291 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-28 13:49:36,292 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-28 13:49:36,292 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-28 13:49:36,293 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-28 13:49:36,294 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-28 13:49:36,295 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-28 13:49:36,295 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-28 13:49:36,296 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-28 13:49:36,297 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-28 13:49:36,297 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-28 13:49:36,298 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-28 13:49:36,298 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-28 13:49:36,299 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-28 13:49:36,299 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-28 13:49:36,300 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-28 13:49:36,300 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-28 13:49:36,301 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-28 13:49:36,301 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-28 13:49:36,302 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-28 13:49:36,303 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-28 13:49:36,303 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-28 13:49:36,304 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-28 13:49:36,304 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-28 13:49:36,305 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-28 13:49:36,305 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-28 13:49:36,306 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-28 13:49:36,307 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-28 13:49:36,308 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-28 13:49:36,308 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-28 13:49:36,309 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-28 13:49:36,310 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-28 13:49:36,311 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-28 13:49:36,313 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-28 13:49:36,314 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-28 13:49:36,314 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-28 13:49:36,315 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-28 13:49:36,316 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-28 13:49:36,318 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-28 13:49:36,319 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-28 13:49:36,319 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-28 13:49:36,320 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-28 13:49:36,321 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-28 13:49:36,321 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-28 13:49:36,321 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-28 13:49:36,322 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-28 13:49:36,322 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-28 13:49:36,323 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-28 13:49:36,323 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-28 13:49:36,324 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-28 13:49:36,325 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-28 13:49:36,326 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-28 13:49:36,327 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-28 13:49:36,328 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-28 13:49:36,330 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-28 13:49:36,330 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-28 13:49:36,331 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-28 13:49:36,331 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-28 13:49:36,331 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-28 13:49:36,332 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-28 13:49:36,332 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-28 13:49:36,332 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-28 13:49:36,333 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-28 13:49:36,333 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-28 13:49:36,333 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-28 13:49:36,333 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-28 13:49:36,334 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-28 13:49:36,334 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-28 13:49:36,334 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-28 13:49:36,335 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-28 13:49:36,335 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-28 13:49:36,335 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-28 13:49:36,336 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-28 13:49:36,336 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-28 13:49:36,336 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-28 13:49:36,336 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-28 13:49:36,337 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-28 13:49:36,337 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-28 13:49:36,337 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-28 13:49:36,338 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-28 13:49:36,338 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-28 13:49:36,338 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-28 13:49:36,339 - crud - INFO - Yielded a total of 100 molecules
+2024-08-28 13:54:46,474 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 13:54:46,476 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-28 13:54:46,476 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: CC
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: COC
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-28 13:54:46,526 - root - INFO - Validating SMILES: C1=CC=CC=C1O
+2024-08-28 13:54:46,526 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-28 13:54:46,536 - root - INFO - Validating SMILES: CCCCN
+2024-08-28 13:54:46,536 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-28 13:54:46,536 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:54:46,536 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-28 13:54:46,536 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:54:46,536 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-28 13:54:46,536 - root - INFO - Validating SMILES: C1=CC=CC=C1
+2024-08-28 13:54:46,541 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,542 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-28 13:54:46,542 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: CCS
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:54:46,552 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-28 13:54:46,552 - root - INFO - Validating SMILES: N#CC
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: O
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: CCOO
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: O=C=O
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: COC
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: CN
+2024-08-28 13:54:46,559 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-28 13:54:46,559 - root - INFO - Validating SMILES: COC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCO
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CO
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CC(=O)O
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCO
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CO
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: C1CNCCN1
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 13:54:46,575 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-28 13:54:46,575 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,590 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-28 13:54:46,590 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CN
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: O
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CN
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: COO
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CO
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-28 13:54:46,592 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,592 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-28 13:54:46,606 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 13:54:46,607 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-28 13:54:46,609 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:54:46,609 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-28 13:54:46,609 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:54:46,609 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-28 13:54:46,609 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 13:54:46,609 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-28 13:54:46,609 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:54:46,609 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-28 13:54:46,609 - root - INFO - Validating SMILES: CO
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: CCCOC
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: C1CCC1F
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 13:54:46,616 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-28 13:54:46,616 - root - INFO - Validating SMILES: CC(Cl)CO
+2024-08-28 13:54:46,622 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-28 13:54:46,622 - root - INFO - Validating SMILES: C1=CC=C(C=C1)O
+2024-08-28 13:54:46,622 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: COC
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: O=C(O)CC
+2024-08-28 13:54:46,625 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-28 13:54:46,625 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:54:46,638 - crud - INFO - Yielded a total of 100 molecules
+2024-08-28 13:59:38,932 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 13:59:38,938 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:38,940 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:59:38,940 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 13:59:38,940 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:59:38,940 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:59:38,940 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-28 13:59:38,940 - root - INFO - Validating SMILES: CC
+2024-08-28 13:59:38,943 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-28 13:59:38,943 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 13:59:38,944 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-28 13:59:38,944 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:59:38,945 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-28 13:59:38,945 - root - INFO - Validating SMILES: COC
+2024-08-28 13:59:38,945 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-28 13:59:38,945 - root - INFO - Validating SMILES: C1=CC=CC=C1O
+2024-08-28 13:59:38,945 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-28 13:59:38,945 - root - INFO - Validating SMILES: CCCCN
+2024-08-28 13:59:38,945 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-28 13:59:38,954 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:59:38,955 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-28 13:59:38,955 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:59:38,955 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-28 13:59:38,955 - root - INFO - Validating SMILES: C1=CC=CC=C1
+2024-08-28 13:59:38,955 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-28 13:59:38,955 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:59:38,955 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-28 13:59:38,955 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:59:38,963 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-28 13:59:38,963 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:38,963 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-28 13:59:38,963 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:59:38,963 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-28 13:59:38,963 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:59:38,963 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-28 13:59:38,963 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:59:38,970 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-28 13:59:38,970 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 13:59:38,970 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-28 13:59:38,970 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:38,970 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-28 13:59:38,976 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: CCS
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: N#CC
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: O
+2024-08-28 13:59:38,978 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-28 13:59:38,978 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 13:59:38,992 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-28 13:59:38,992 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: C=O
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: CCOO
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: O=C=O
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 13:59:38,993 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-28 13:59:38,993 - root - INFO - Validating SMILES: COC
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: C
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CN
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: COC
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:59:39,008 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-28 13:59:39,008 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCO
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CO
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CC(=O)O
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: NCCO
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCO
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CO
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: C1CNCCN1
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:59:39,023 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-28 13:59:39,023 - root - INFO - Validating SMILES: CN
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: O
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CN
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: COO
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CO
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CCN
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CO
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CCCC
+2024-08-28 13:59:39,039 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-28 13:59:39,039 - root - INFO - Validating SMILES: CCCOC
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: C1CCC1F
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CCC
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CC(Cl)CO
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: C1=CC=C(C=C1)O
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: COC
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CNC
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CCCl
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: C#N
+2024-08-28 13:59:39,055 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-28 13:59:39,055 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 13:59:39,070 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-28 13:59:39,070 - root - INFO - Validating SMILES: O=C(O)CC
+2024-08-28 13:59:39,070 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-28 13:59:39,070 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 13:59:39,070 - crud - INFO - Yielded a total of 100 molecules
+2024-08-28 14:00:27,336 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 14:00:27,339 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-28 14:00:27,340 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:00:27,341 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-28 14:00:27,341 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:00:27,342 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-28 14:00:27,343 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 14:00:27,343 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-28 14:00:27,344 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:00:27,345 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-28 14:00:27,346 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:00:27,346 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-28 14:00:27,347 - root - INFO - Validating SMILES: CC
+2024-08-28 14:00:27,348 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-28 14:00:27,348 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 14:00:27,349 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-28 14:00:27,349 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:00:27,350 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-28 14:00:27,350 - root - INFO - Validating SMILES: COC
+2024-08-28 14:00:27,350 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-28 14:00:27,351 - root - INFO - Validating SMILES: C1=CC=CC=C1O
+2024-08-28 14:00:27,351 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-28 14:00:27,352 - root - INFO - Validating SMILES: CCCCN
+2024-08-28 14:00:27,353 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-28 14:00:27,354 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:00:27,357 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-28 14:00:27,359 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:00:27,360 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-28 14:00:27,361 - root - INFO - Validating SMILES: C1=CC=CC=C1
+2024-08-28 14:00:27,362 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-28 14:00:27,363 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:00:27,364 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-28 14:00:27,364 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:00:27,365 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-28 14:00:27,365 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:00:27,366 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-28 14:00:27,367 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:00:27,367 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-28 14:00:27,368 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:00:27,369 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-28 14:00:27,369 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:00:27,370 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-28 14:00:27,370 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 14:00:27,371 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-28 14:00:27,371 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:00:27,372 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-28 14:00:27,372 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:00:27,374 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-28 14:00:27,374 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:00:27,375 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-28 14:00:27,375 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:00:27,376 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-28 14:00:27,376 - root - INFO - Validating SMILES: CCS
+2024-08-28 14:00:27,376 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-28 14:00:27,377 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:00:27,378 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-28 14:00:27,379 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:00:27,379 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-28 14:00:27,379 - root - INFO - Validating SMILES: N#CC
+2024-08-28 14:00:27,379 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-28 14:01:31,364 - root - INFO - Validating SMILES: O
+2024-08-28 14:01:31,367 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-28 14:01:31,368 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 14:01:31,369 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-28 14:01:31,370 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:01:31,372 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-28 14:01:31,373 - main - INFO - Fetching server ID
+2024-08-28 14:01:31,374 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:01:31,375 - main - INFO - Fetching server ID
+2024-08-28 14:01:31,377 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-28 14:01:31,377 - root - INFO - Validating SMILES: CCOO
+2024-08-28 14:01:31,378 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-28 14:01:31,380 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:01:31,381 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-28 14:01:31,381 - root - INFO - Validating SMILES: O=C=O
+2024-08-28 14:01:31,382 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-28 14:01:31,383 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:01:31,384 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-28 14:01:31,384 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:01:31,385 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-28 14:01:31,386 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:01:31,386 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-28 14:01:31,387 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 14:01:31,387 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-28 14:01:31,388 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 14:01:31,389 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-28 14:01:31,389 - root - INFO - Validating SMILES: COC
+2024-08-28 14:01:31,390 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-28 14:01:31,390 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:01:31,391 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-28 14:01:31,392 - root - INFO - Validating SMILES: C
+2024-08-28 14:01:31,392 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-28 14:01:31,393 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 14:01:31,394 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-28 14:01:31,395 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:01:31,396 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-28 14:01:31,397 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:01:31,397 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-28 14:01:31,398 - root - INFO - Validating SMILES: CN
+2024-08-28 14:01:31,398 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-28 14:01:31,399 - root - INFO - Validating SMILES: COC
+2024-08-28 14:01:31,399 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-28 14:01:31,400 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:01:31,401 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-28 14:01:31,401 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 14:01:31,402 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-28 14:01:31,402 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:01:31,403 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-28 14:01:31,403 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:01:31,403 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-28 14:01:31,404 - root - INFO - Validating SMILES: CCO
+2024-08-28 14:01:31,405 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-28 14:01:31,405 - root - INFO - Validating SMILES: CO
+2024-08-28 14:01:31,405 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-28 14:01:31,405 - root - INFO - Validating SMILES: CC(=O)O
+2024-08-28 14:01:31,406 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-28 14:01:31,406 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:01:31,407 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-28 14:01:31,407 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:01:31,407 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-28 14:01:31,407 - root - INFO - Validating SMILES: CCO
+2024-08-28 14:01:31,408 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-28 14:01:31,408 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:01:31,408 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-28 14:01:31,409 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:01:31,409 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-28 14:01:31,409 - root - INFO - Validating SMILES: CO
+2024-08-28 14:01:31,410 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-28 14:01:31,410 - root - INFO - Validating SMILES: C1CNCCN1
+2024-08-28 14:01:31,411 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-28 14:01:31,411 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:01:31,411 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-28 14:01:31,412 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 14:01:31,412 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-28 14:01:31,413 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:01:31,413 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-28 14:01:31,414 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:01:31,414 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-28 14:01:31,414 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:01:31,415 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-28 14:01:31,415 - root - INFO - Validating SMILES: CN
+2024-08-28 14:01:31,416 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-28 14:01:31,416 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:01:31,417 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-28 14:01:31,417 - root - INFO - Validating SMILES: O
+2024-08-28 14:01:31,417 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-28 14:01:31,418 - root - INFO - Validating SMILES: CN
+2024-08-28 14:01:31,418 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-28 14:01:31,418 - root - INFO - Validating SMILES: COO
+2024-08-28 14:01:31,419 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-28 14:01:31,419 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:01:31,420 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-28 14:01:31,420 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:01:31,420 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-28 14:01:31,420 - root - INFO - Validating SMILES: CO
+2024-08-28 14:01:31,421 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-28 14:01:31,421 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:01:31,421 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-28 14:01:31,421 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 14:01:31,422 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-28 14:01:31,422 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:01:31,422 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-28 14:01:31,423 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:01:31,423 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-28 14:01:31,423 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 14:01:31,424 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-28 14:01:31,424 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:01:31,425 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-28 14:01:31,425 - root - INFO - Validating SMILES: CO
+2024-08-28 14:01:31,425 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-28 14:01:31,426 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:01:31,426 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-28 14:01:31,426 - root - INFO - Validating SMILES: CCCOC
+2024-08-28 14:01:31,427 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-28 14:01:31,427 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:01:31,427 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-28 14:01:31,428 - root - INFO - Validating SMILES: C1CCC1F
+2024-08-28 14:01:31,428 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-28 14:01:31,428 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:01:31,429 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-28 14:01:31,429 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 14:01:31,429 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-28 14:01:31,430 - root - INFO - Validating SMILES: CC(Cl)CO
+2024-08-28 14:01:31,430 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-28 14:01:31,430 - root - INFO - Validating SMILES: C1=CC=C(C=C1)O
+2024-08-28 14:01:31,431 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-28 14:01:31,431 - root - INFO - Validating SMILES: COC
+2024-08-28 14:01:31,432 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-28 14:01:31,432 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:01:31,432 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-28 14:01:31,433 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:01:31,433 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-28 14:01:31,433 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:01:31,434 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-28 14:01:31,434 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:01:31,434 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-28 14:01:31,434 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:01:31,435 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-28 14:01:31,435 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:01:31,435 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-28 14:01:31,436 - root - INFO - Validating SMILES: O=C(O)CC
+2024-08-28 14:01:31,436 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-28 14:01:31,436 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:01:31,437 - crud - INFO - Yielded a total of 100 molecules
+2024-08-28 14:02:43,811 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-28 14:02:43,813 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-28 14:02:43,813 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-28 14:02:43,813 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-28 14:02:43,813 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-28 14:02:43,813 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:02:43,813 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-28 14:02:43,826 - root - INFO - Validating SMILES: CC
+2024-08-28 14:02:43,826 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-28 14:02:43,826 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 14:02:43,826 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-28 14:02:43,826 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:02:43,829 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-28 14:02:43,829 - root - INFO - Validating SMILES: COC
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: C1=CC=CC=C1O
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: CCCCN
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: C1=CC=CC=C1
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,830 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-28 14:02:43,830 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: CCS
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: N#CC
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: CCC(C)O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C=O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: CCOO
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: O=C=O
+2024-08-28 14:02:43,842 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-28 14:02:43,842 - root - INFO - Validating SMILES: C1COC1
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: COC
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C1=CC=C(C=C1)Cl
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CN
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: COC
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: C1CCC1N
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CCO
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CO
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: CC(=O)O
+2024-08-28 14:02:43,857 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-28 14:02:43,857 - root - INFO - Validating SMILES: NCCO
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CCO
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CO
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: C1CNCCN1
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-28 14:02:43,873 - root - INFO - Validating SMILES: C1CCC1O
+2024-08-28 14:02:43,873 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CN
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: O
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CN
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: COO
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CO
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-28 14:02:43,880 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 14:02:43,880 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCN
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: O=C1C=CC=C1
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C1CC2CCC1C2
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: O=CCC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CO
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCCC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCCOC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C1CCC1F
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C1CC1N
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CC(Cl)CO
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C1=CC=C(C=C1)O
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: COC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CNC
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: N=C=O
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: CCCl
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-28 14:02:43,889 - root - INFO - Validating SMILES: C#N
+2024-08-28 14:02:43,889 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-28 14:02:43,905 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:02:43,905 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-28 14:02:43,905 - root - INFO - Validating SMILES: O=C(O)CC
+2024-08-28 14:02:43,905 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-28 14:02:43,905 - root - INFO - Validating SMILES: CC(C)O
+2024-08-28 14:02:43,905 - crud - INFO - Yielded a total of 100 molecules
+2024-08-28 14:03:31,256 - main - INFO - Fetching server ID
+2024-08-28 14:03:32,692 - main - INFO - Fetching server ID
+2024-08-28 14:04:04,214 - main - INFO - Retrieving molecule with ID 1
+2024-08-28 14:04:04,215 - crud - INFO - Fetching molecule with ID 1
+2024-08-28 14:04:04,225 - crud - INFO - Molecule found: C1CC1
+2024-08-28 14:04:04,226 - root - INFO - Validating SMILES: C1CC1
+2024-08-28 14:04:28,226 - main - INFO - Retrieving molecule with ID 12
+2024-08-28 14:04:28,230 - crud - INFO - Fetching molecule with ID 12
+2024-08-28 14:04:28,233 - crud - INFO - Molecule found: CCOCC
+2024-08-28 14:04:28,235 - root - INFO - Validating SMILES: CCOCC
+2024-08-28 14:04:29,754 - main - INFO - Retrieving molecule with ID 12
+2024-08-28 14:04:29,755 - crud - INFO - Fetching molecule with ID 12
+2024-08-28 14:04:29,757 - crud - INFO - Molecule found: CCOCC
+2024-08-28 14:04:29,758 - root - INFO - Validating SMILES: CCOCC
+2024-08-29 10:43:18,494 - main - INFO - Fetching server ID
+2024-08-29 10:43:27,570 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-08-29 10:43:27,572 - crud - INFO - Yielding molecule with mol_id=1
+2024-08-29 10:43:27,572 - crud - INFO - Yielding molecule with mol_id=2
+2024-08-29 10:43:27,595 - crud - INFO - Yielding molecule with mol_id=3
+2024-08-29 10:43:27,595 - crud - INFO - Yielding molecule with mol_id=4
+2024-08-29 10:43:27,595 - crud - INFO - Yielding molecule with mol_id=5
+2024-08-29 10:43:27,595 - crud - INFO - Yielding molecule with mol_id=6
+2024-08-29 10:43:27,604 - crud - INFO - Yielding molecule with mol_id=7
+2024-08-29 10:43:27,604 - crud - INFO - Yielding molecule with mol_id=8
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=9
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=10
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=11
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=12
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=13
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=14
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=15
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=16
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=17
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=18
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=19
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=20
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=21
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=22
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=23
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=24
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=25
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=26
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=27
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=28
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=29
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=30
+2024-08-29 10:43:27,606 - crud - INFO - Yielding molecule with mol_id=31
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=32
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=33
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=34
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=35
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=36
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=37
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=38
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=39
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=40
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=41
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=42
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=43
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=44
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=45
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=46
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=47
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=48
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=49
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=50
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=51
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=52
+2024-08-29 10:43:27,612 - crud - INFO - Yielding molecule with mol_id=53
+2024-08-29 10:43:27,620 - crud - INFO - Yielding molecule with mol_id=54
+2024-08-29 10:43:27,620 - crud - INFO - Yielding molecule with mol_id=55
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=56
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=57
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=58
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=59
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=60
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=61
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=62
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=63
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=64
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=65
+2024-08-29 10:43:27,624 - crud - INFO - Yielding molecule with mol_id=66
+2024-08-29 10:43:27,636 - crud - INFO - Yielding molecule with mol_id=67
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=68
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=69
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=70
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=71
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=72
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=73
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=74
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=75
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=76
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=77
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=78
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=79
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=80
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=81
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=82
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=83
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=84
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=85
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=86
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=87
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=88
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=89
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=90
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=91
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=92
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=93
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=94
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=95
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=96
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=97
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=98
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=99
+2024-08-29 10:43:27,638 - crud - INFO - Yielding molecule with mol_id=100
+2024-08-29 10:43:27,638 - crud - INFO - Yielded a total of 100 molecules
