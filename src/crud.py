@@ -82,23 +82,25 @@ def search_molecules(db: Session, substructure_smile: str):
         raise ValueError("Invalid substructure SMILES.")
 
     matched_smiles = [smile for smile in smiles if
-                      Chem.MolFromSmiles(smile).HasSubstructMatch(substructure)]
+                      Chem.MolFromSmiles(smile).
+                      HasSubstructMatch(substructure)]
     return matched_smiles
 
 
 def add_molecules_from_file(db: Session, file_content: str):
     lines = file_content.splitlines()
-    existing_ids = {mol.mol_id for mol in db.query(models.Molecule.mol_id).all()}
+    existing_ids = {mol.mol_id for mol in
+                    db.query(models.Molecule.mol_id).all()}
 
     for line in lines:
-        parts = line.split(maxsplit=2)  # maxsplit=2 allows for up to 3 parts: id, name, and optional description
+        parts = line.split(maxsplit=2)
         if len(parts) < 2:
             logger.error("Invalid file format: %s", line)
             raise ValueError("Invalid file format. "
                              "Must contain at least mol_id and name.")
 
         mol_id, name = int(parts[0]), parts[1]
-        description = parts[2] if len(parts) == 3 else None  # Optional description
+        description = parts[2] if len(parts) == 3 else None
 
         if mol_id not in existing_ids:
             db_molecule = models.Molecule(mol_id=mol_id, name=name,

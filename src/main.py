@@ -118,8 +118,10 @@ def search_molecules_by_smile(
     logger.info(f"Searching for molecules with substructure: "
                 f"{substructure_smile}")
     try:
-        results = crud.search_molecules(db=db, substructure_smile=substructure_smile)
-        logger.info(f"Search completed, found {len(results)} matches: {results}")
+        results = crud.search_molecules(db=db,
+                                        substructure_smile=substructure_smile)
+        logger.info(f"Search completed, found {len(results)} "
+                    f"matches: {results}")
         return results
     except ValueError as e:
         logger.error(f"Search failed: {e}")
