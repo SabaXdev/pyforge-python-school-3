@@ -9,7 +9,8 @@ from models import Base
 
 # Set up logging
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s")
 
 # Set up the SQLite database URL (using a file for tests)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
@@ -59,7 +60,7 @@ app.dependency_overrides[get_db] = override_get_db
 ])
 def test_search_molecules_by_smile(substructure_smile, expected_result,
                                    db_session):
-    logger.info(f"Starting test for searching molecules by smile")
+    logger.info("Starting test for searching molecules by smile")
     # Add initial molecules
     initial_molecules = [
         {"mol_id": 1, "name": "CCO"},

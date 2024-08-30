@@ -10,7 +10,8 @@ import io
 
 # Set up logging
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s")
 
 
 # Set up the SQLite database URL (using a file for tests)
@@ -65,7 +66,7 @@ app.dependency_overrides[get_db] = override_get_db
 )
 def test_upload_file(file_content, expected_status_code, expected_response,
                      db_session):
-    logger.info(f"Starting test for uploading file with molecules")
+    logger.info("Starting test for uploading file with molecules")
     # Simulate a file upload using FastAPI's UploadFile mechanism
     file = io.BytesIO(file_content.encode('utf-8'))
     files = {'file': ('molecules.txt', file, 'text/plain')}
@@ -84,12 +85,12 @@ def test_upload_file(file_content, expected_status_code, expected_response,
     else:
         # Handle the expected error response
         assert response_data == expected_response
-    logger.info(f"Completed test")
+    logger.info("Completed test")
 
 
 # Test for uploading a file with invalid content
 def test_upload_file_invalid_content(db_session):
-    logger.info(f"Starting test for uploading file with invalid molecules")
+    logger.info("Starting test for uploading file with invalid molecules")
     # Simulate a file with entirely invalid SMILES strings
     file_content = "invalid_smiles1\ninvalid_smiles2\n"
     file = io.BytesIO(file_content.encode('utf-8'))
@@ -101,6 +102,7 @@ def test_upload_file_invalid_content(db_session):
 
     # Check that the response returns a 400 status code
     assert response.status_code == 400
-    assert response.json() == {"detail": "Invalid file format. Must contain at least mol_id and name."}
+    assert response.json() == {"detail": "Invalid file format. Must contain "
+                                         "at least mol_id and name."}
 
-    logger.info(f"Completed test")
+    logger.info("Completed test")

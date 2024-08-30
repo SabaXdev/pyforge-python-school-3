@@ -9,7 +9,8 @@ from models import Base
 
 # Set up logging
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s")
 
 
 # Set up the SQLite database URL (using a file for tests)
@@ -68,7 +69,7 @@ app.dependency_overrides[get_db] = override_get_db
 )
 def test_update_molecule(db_session, mol_id, update_data,
                          expected_status_code, expected_response):
-    logger.info(f"Starting test for updating molecules")
+    logger.info("Starting test for updating molecules")
     # Add initial molecules
     initial_molecules = [
         {"mol_id": 1, "name": "CCO"},

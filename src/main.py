@@ -1,8 +1,6 @@
-from typing import List, Iterator
+from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Depends
 from sqlalchemy.orm import Session
-from fastapi.middleware.cors import CORSMiddleware
-
 import logging
 import crud
 import models
