@@ -103,9 +103,11 @@ def add_molecules_from_file(db: Session, file_content: str):
 
         # Validate the SMILES string using MoleculeCreate
         try:
-            schemas.MoleculeCreate(mol_id=mol_id, name=name, description=description)
+            schemas.MoleculeCreate(mol_id=mol_id, name=name,
+                                   description=description)
         except ValueError as e:
-            logger.error("Validation failed for molecule %s with ID %d: %s", name, mol_id, str(e))
+            logger.error("Validation failed for molecule %s with ID %d: %s",
+                         name, mol_id, str(e))
             continue
 
         if mol_id not in existing_ids:

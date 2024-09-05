@@ -151,9 +151,10 @@ async def search_molecules_by_smile(
         try:
             # Decode bytes to string and convert to dictionary
             cached_result_dict = json.loads(cached_result.decode('utf-8'))
-            results = cached_result_dict.get("results", [])  # Extract the list of results from the dictionary
+            results = cached_result_dict.get("results", [])
             if isinstance(results, list):  # Ensure results is a list
-                logger.info(f"Returning cached result for substructure: {substructure_smile}")
+                logger.info(f"Returning cached result for substructure: "
+                            f"{substructure_smile}")
                 return results
         except json.JSONDecodeError:
             logger.error("Error decoding cached result")
@@ -165,7 +166,6 @@ async def search_molecules_by_smile(
         results = crud.search_molecules(db=db,
                                         substructure_smile=substructure_smile)
 
-        results_dict = {"results": results}
         set_cache(cache_key, {"results": results}, expiration=300)
 
         logger.info(f"Search completed, found {len(results)} "
