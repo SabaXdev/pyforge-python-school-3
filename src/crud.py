@@ -21,7 +21,6 @@ def create_molecule(db: Session, molecule: schemas.MoleculeCreate):
 
 
 def get_molecule_by_id(db: Session, molecule_id: int):
-    logger.info("Fetching molecule with ID %d", molecule_id)
     db_molecule = db.query(models.Molecule).filter(
         models.Molecule.mol_id == molecule_id).first()
     if db_molecule:
@@ -102,6 +101,13 @@ def add_molecules_from_file(db: Session, file_content: str):
         mol_id, name = int(parts[0]), parts[1]
         description = parts[2] if len(parts) == 3 else None
 
+        # Validate the SMILES string using MoleculeCreate
+        try:
+            schemas.MoleculeCreate(mol_id=mol_id, name=name, description=description)
+        except ValueError as e:
+            logger.error("Validation failed for molecule %s with ID %d: %s", name, mol_id, str(e))
+            continue
+
         if mol_id not in existing_ids:
             db_molecule = models.Molecule(mol_id=mol_id, name=name,
                                           description=description)
@@ -115,7 +121,6 @@ def add_molecules_from_file(db: Session, file_content: str):
 
 
 def clear_all_molecules(db: Session):
-    logger.info("Clearing all molecules from the database")
     db.query(models.Molecule).delete()
     db.commit()
     logger.info("All molecules cleared successfully.")

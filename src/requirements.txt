@@ -53,6 +53,7 @@ python-multipart
 pytz
 pyzmq
 rdkit
+redis
 reportlab
 rlPyCairo
 setuptools
