@@ -2,9 +2,9 @@ name: Python CI
 
 on:
   push:
-    branches: [ main, continuous-integration, hw8-database, hw9-iterators, hw10-redis ]
+    branches: [ main, continuous-integration, hw8-database, hw9-iterators, hw10-redis, hw11-celery ]
   pull_request:
-    branches: [ main, continuous-integration, hw8-database, hw9-iterators, hw10-redis]
+    branches: [ main, continuous-integration, hw8-database, hw9-iterators, hw10-redis, hw11-celery ]
 
 jobs:
   build:

@@ -2334,3 +2334,166 @@
 2024-09-05 10:39:38,245 - main - INFO - No cache found for key: substructure_search:C1CC1
 2024-09-05 10:39:38,246 - main - INFO - Performing substructure search for: C1CC1
 2024-09-05 10:39:38,254 - main - INFO - Search completed, found 8 matches: ['C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1N', 'C1CC1N']
+2024-09-10 16:12:46,292 - main - INFO - Retrieving molecule with ID 10
+2024-09-10 16:12:46,307 - crud - INFO - Molecule found: C1=CC=CC=C1O
+2024-09-10 16:15:19,410 - main - INFO - Retrieving molecule with ID 20
+2024-09-10 16:15:19,415 - crud - INFO - Molecule found: CCN
+2024-09-10 16:16:36,408 - main - INFO - Retrieving molecule with ID 20
+2024-09-10 16:16:36,414 - crud - INFO - Molecule found: CCN
+2024-09-10 16:16:39,744 - main - INFO - Retrieving molecule with ID 20
+2024-09-10 16:16:39,746 - crud - INFO - Molecule found: CCN
+2024-09-10 16:16:56,121 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:16:58,428 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 16:18:24,626 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:18:24,642 - main - INFO - No cache found for key: substructure_search:CC
+2024-09-10 16:18:24,643 - main - INFO - Performing substructure search for: CC
+2024-09-10 16:18:24,772 - main - INFO - Search completed, found 66 matches: ['C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1N', 'C1CC1N', 'C1CC2CCC1C2', 'C1CC2CCC1C2', 'C1CCC1F', 'C1CCC1N', 'C1CCC1N', 'C1CCC1O', 'C1CCC1O', 'C1CNCCN1', 'C1COC1', 'C1COC1', 'C1COC1', 'CC', 'CC(=O)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(Cl)CO', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC(C)O', 'CCC(C)O', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCO', 'CCCOC', 'CCCl', 'CCCl', 'CCCl', 'CCN', 'CCN', 'CCN', 'CCO', 'CCO', 'CCOCC', 'CCOCC', 'CCOCC', 'CCS', 'N#CC', 'NCCO', 'NCCO', 'NCCO', 'NCCO', 'O=C(O)CC', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=CCC', 'O=CCC', 'O=CCC']
+2024-09-10 16:18:30,241 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:18:30,243 - main - INFO - Cache hit for key: substructure_search:CC
+2024-09-10 16:18:30,243 - main - INFO - Returning cached result for substructure: CC
+2024-09-10 16:22:38,975 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:22:38,977 - main - INFO - Cache hit for key: substructure_search:CC
+2024-09-10 16:22:38,977 - main - INFO - Returning cached result for substructure: CC
+2024-09-10 16:22:51,281 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:22:53,549 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 12:23:40,016 - main - INFO - Fetching server ID
+2024-09-10 12:23:44,414 - main - INFO - Fetching server ID
+2024-09-10 16:24:51,951 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:24:51,963 - main - INFO - No cache found for key: substructure_search:CC
+2024-09-10 16:24:51,963 - main - INFO - Performing substructure search for: CC
+2024-09-10 16:24:51,984 - main - INFO - Search completed, found 66 matches: ['C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1N', 'C1CC1N', 'C1CC2CCC1C2', 'C1CC2CCC1C2', 'C1CCC1F', 'C1CCC1N', 'C1CCC1N', 'C1CCC1O', 'C1CCC1O', 'C1CNCCN1', 'C1COC1', 'C1COC1', 'C1COC1', 'CC', 'CC(=O)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(Cl)CO', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC(C)O', 'CCC(C)O', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCO', 'CCCOC', 'CCCl', 'CCCl', 'CCCl', 'CCN', 'CCN', 'CCN', 'CCO', 'CCO', 'CCOCC', 'CCOCC', 'CCOCC', 'CCS', 'N#CC', 'NCCO', 'NCCO', 'NCCO', 'NCCO', 'O=C(O)CC', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=CCC', 'O=CCC', 'O=CCC']
+2024-09-10 16:24:58,426 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:24:58,427 - main - INFO - Cache hit for key: substructure_search:CC
+2024-09-10 16:24:58,428 - main - INFO - Returning cached result for substructure: CC
+2024-09-10 16:30:14,383 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:30:14,391 - main - INFO - No cache found for key: substructure_search:CC
+2024-09-10 16:30:14,391 - main - INFO - Performing substructure search for: CC
+2024-09-10 16:30:14,398 - main - INFO - Search completed, found 66 matches: ['C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1', 'C1CC1N', 'C1CC1N', 'C1CC2CCC1C2', 'C1CC2CCC1C2', 'C1CCC1F', 'C1CCC1N', 'C1CCC1N', 'C1CCC1O', 'C1CCC1O', 'C1CNCCN1', 'C1COC1', 'C1COC1', 'C1COC1', 'CC', 'CC(=O)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(C)O', 'CC(Cl)CO', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC', 'CCC(C)O', 'CCC(C)O', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCC', 'CCCO', 'CCCOC', 'CCCl', 'CCCl', 'CCCl', 'CCN', 'CCN', 'CCN', 'CCO', 'CCO', 'CCOCC', 'CCOCC', 'CCOCC', 'CCS', 'N#CC', 'NCCO', 'NCCO', 'NCCO', 'NCCO', 'O=C(O)CC', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=C1C=CC=C1', 'O=CCC', 'O=CCC', 'O=CCC']
+2024-09-10 16:30:31,083 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:30:31,085 - main - INFO - Cache hit for key: substructure_search:CC
+2024-09-10 16:30:31,085 - main - INFO - Returning cached result for substructure: CC
+2024-09-10 16:31:36,984 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:31:36,985 - main - INFO - Cache hit for key: substructure_search:CC
+2024-09-10 16:31:36,986 - main - INFO - Returning cached result for substructure: CC
+2024-09-10 16:31:49,749 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:31:52,044 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 16:32:02,663 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:32:04,944 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 16:34:31,778 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:34:34,077 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 16:36:41,660 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:36:43,948 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 16:37:27,041 - main - INFO - Fetching server ID
+2024-09-10 16:40:52,898 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-10 16:40:55,183 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-10 16:40:58,470 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-10 16:41:01,758 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-10 16:43:39,222 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-10 16:43:41,514 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-10 16:43:44,811 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-10 16:54:46,385 - main - INFO - Searching for molecules with substructure: CC
+2024-09-10 16:54:48,746 - main - ERROR - Error retrieving cache for key: substructure_search:CC, Exception: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2024-09-10 17:00:21,290 - main - INFO - Fetching server ID
+2024-09-10 17:00:37,432 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-10 17:00:39,712 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-10 17:00:42,972 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-10 17:00:46,255 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-10 17:00:49,538 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2024-09-10 17:00:52,820 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2024-09-12 09:29:01,492 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 09:29:03,762 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 09:29:07,039 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 09:29:10,318 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-12 09:29:13,608 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2024-09-12 09:29:16,892 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2024-09-12 09:29:20,177 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2024-09-12 09:29:23,452 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2024-09-12 09:29:26,731 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2024-09-12 09:29:30,010 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2024-09-12 09:35:55,554 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 09:35:59,646 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 09:41:08,927 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 09:41:11,207 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 09:41:14,490 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 10:03:59,446 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 10:04:01,737 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 10:04:05,019 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 10:04:08,301 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-12 10:04:11,577 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2024-09-12 10:38:32,532 - main - INFO - Fetching server ID
+2024-09-12 10:38:49,330 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 10:38:51,616 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 10:38:54,905 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 10:38:58,188 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-12 10:39:42,107 - main - INFO - Fetching server ID
+2024-09-12 10:39:59,699 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 10:40:01,986 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 10:40:05,272 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 10:40:08,542 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2024-09-12 10:40:11,831 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2024-09-12 10:40:15,106 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2024-09-12 10:40:18,378 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2024-09-12 13:12:20,249 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 13:12:22,531 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 13:12:25,809 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2024-09-12 13:13:21,251 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 13:13:23,537 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-09-12 13:17:54,540 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 14:01:48,031 - main - INFO - Retrieving molecule with ID 1
+2024-09-12 14:01:48,071 - crud - INFO - Molecule found: C1CC1
+2024-09-12 14:01:59,172 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:04:04,391 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:07:40,930 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:07:56,605 - main - INFO - Fetching server ID
+2024-09-12 14:08:03,532 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:08:22,471 - main - INFO - Fetching server ID
+2024-09-12 14:08:28,322 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:09:08,783 - main - INFO - Fetching server ID
+2024-09-12 14:09:15,692 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:09:56,992 - main - INFO - Fetching server ID
+2024-09-12 14:10:03,141 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:12:11,776 - main - INFO - Fetching server ID
+2024-09-12 14:12:18,336 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:12:22,383 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:14:02,768 - main - INFO - Fetching server ID
+2024-09-12 14:14:11,207 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:14:17,691 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:16:29,202 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:16:30,016 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:16:31,223 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:20:20,693 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:25:16,856 - main - INFO - Fetching server ID
+2024-09-12 14:25:24,266 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:31:13,151 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:31:21,804 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:31:23,201 - main - INFO - Searching for molecules with substructure: CC
+2024-09-12 14:32:15,760 - main - INFO - Searching for molecules with substructure: CNC
+2024-09-12 14:34:02,059 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 14:34:45,195 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 14:34:51,310 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 14:34:53,902 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 14:34:54,447 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 19:42:28,667 - main - INFO - Fetching server ID
+2024-09-12 19:42:51,992 - crud - INFO - Fetching all molecules with skip=0 and limit=10
+2024-09-12 19:42:52,022 - crud - INFO - Yielding molecule with mol_id=1
+2024-09-12 19:42:52,023 - crud - INFO - Yielding molecule with mol_id=2
+2024-09-12 19:42:52,025 - crud - INFO - Yielding molecule with mol_id=3
+2024-09-12 19:42:52,029 - crud - INFO - Yielding molecule with mol_id=4
+2024-09-12 19:42:52,030 - crud - INFO - Yielding molecule with mol_id=5
+2024-09-12 19:42:52,030 - crud - INFO - Yielding molecule with mol_id=6
+2024-09-12 19:42:52,031 - crud - INFO - Yielding molecule with mol_id=7
+2024-09-12 19:42:52,032 - crud - INFO - Yielding molecule with mol_id=8
+2024-09-12 19:42:52,032 - crud - INFO - Yielding molecule with mol_id=9
+2024-09-12 19:42:52,032 - crud - INFO - Yielding molecule with mol_id=10
+2024-09-12 19:42:52,033 - crud - INFO - Yielded a total of 10 molecules
+2024-09-12 19:43:03,370 - main - INFO - Searching for molecules with substructure: CNC
+2024-09-12 19:46:52,107 - main - INFO - Searching for molecules with substructure: CNC
+2024-09-12 19:47:07,164 - main - INFO - Searching for molecules with substructure: CCCCCCCCCCCC
+2024-09-12 19:47:23,756 - main - INFO - Searching for molecules with substructure: PPPPPPPPPPPPPP
+2024-09-12 19:47:31,189 - main - INFO - Searching for molecules with substructure: PP
+2024-09-12 19:50:21,081 - main - INFO - Fetching server ID
+2024-09-12 19:50:31,051 - main - INFO - Searching for molecules with substructure: CCCC
+2024-09-12 19:50:37,853 - main - INFO - Searching for molecules with substructure: CCCC
+2024-09-12 19:55:48,035 - main - INFO - Searching for molecules with substructure: CCC
+2024-09-12 19:55:52,692 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
+2024-09-12 19:55:54,974 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.

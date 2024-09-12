@@ -3,6 +3,7 @@ annotated-types
 anyio
 asttokens
 certifi
+celery[redis]
 chardet
 click
 colorama

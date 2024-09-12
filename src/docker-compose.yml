@@ -12,6 +12,7 @@ services:
       - webnet
     depends_on:
       - redis
+      - celery_worker
     ports:
       - "8001:8000"
 
@@ -27,6 +28,7 @@ services:
       - webnet
     depends_on:
       - redis
+      - celery_worker
     ports:
       - "8002:8000"
 
@@ -37,6 +39,16 @@ services:
       - webnet
     ports:
       - "6379:6379"
+
+  celery_worker:
+    build: .
+    command: celery -A celery_worker worker --pool=solo -l info
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
+    networks:
+      - webnet
 
   nginx:
     image: nginx:latest

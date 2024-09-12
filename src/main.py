@@ -1,6 +1,8 @@
 import json
-import os
 from typing import List
+from celery_worker import celery, search_molecules_task
+from celery.result import AsyncResult
+
 from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Depends
 from sqlalchemy.orm import Session
 import logging
@@ -9,7 +11,6 @@ import crud
 import models
 import schemas
 from database import engine, SessionLocal
-from models import Molecule
 from rdkit import Chem
 from os import getenv
 
@@ -28,8 +29,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 # Connect to Redis
-redis_host = os.getenv("REDIS_HOST", "localhost")
-redis_client = redis.Redis(host=redis_host, port=6379)
+redis_client = redis.Redis(host='localhost', port=6379, db=0)
 
 # Logging configuration
 logging.basicConfig(
@@ -69,16 +69,7 @@ async def get_cached_result(key):
 
 def set_cache(key: str, value: dict, expiration: int = 60):
     redis_client.setex(key, expiration, json.dumps(value))
-
-
-# Create a list to hold instances of Molecule and add instances
-# of Molecule to the list
-molecules: List[Molecule] = [
-    Molecule(mol_id=1, name="CCO"),  # Ethanol
-    Molecule(mol_id=2, name="c1ccccc1"),  # Benzene
-    Molecule(mol_id=3, name="CC(=O)O"),  # Acetic acid
-    Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")  # Aspirin
-]
+    print(redis_client.get('key'))
 
 
 @app.get("/")
@@ -135,45 +126,29 @@ def retrieve_molecules(skip: int = 0, limit: int = Query(default=100, gt=0),
     return crud.get_all_molecules(db=db, skip=skip, limit=limit)
 
 
-@app.get("/search", response_model=List[str])
+@app.get("/search")
 async def search_molecules_by_smile(
         substructure_smile: str =
-        Query(..., description="SMILES string of the substructure."),
-        db: Session = Depends(get_db)):
+        Query(..., description="SMILES string of the substructure.")):
     logger.info(f"Searching for molecules with substructure: "
                 f"{substructure_smile}")
 
-    # Check Redis cache for the substructure search result
-    cache_key = f"substructure_search:{substructure_smile}"
-    cached_result = await get_cached_result(cache_key)
+    # Pass smile to the celery task and wait for result
+    task = search_molecules_task.delay(substructure_smile)
+    return {"task_id": task.id, "status": task.status}
 
-    if cached_result:
-        try:
-            # Decode bytes to string and convert to dictionary
-            cached_result_dict = json.loads(cached_result.decode('utf-8'))
-            results = cached_result_dict.get("results", [])
-            if isinstance(results, list):  # Ensure results is a list
-                logger.info(f"Returning cached result for substructure: "
-                            f"{substructure_smile}")
-                return results
-        except json.JSONDecodeError:
-            logger.error("Error decoding cached result")
-            # Handle JSON decode error if needed
 
-    # Perform the substructure search if not cached
-    logger.info(f"Performing substructure search for: {substructure_smile}")
-    try:
-        results = crud.search_molecules(db=db,
-                                        substructure_smile=substructure_smile)
+@app.get("/search/{task_id}", response_model=dict)
+async def get_task_status(task_id: str):
+    # Store result in task
+    task = AsyncResult(task_id, app=celery)
 
-        set_cache(cache_key, {"results": results}, expiration=300)
-
-        logger.info(f"Search completed, found {len(results)} "
-                    f"matches: {results}")
-        return results
-    except ValueError as e:
-        logger.error(f"Search failed: {e}")
-        raise HTTPException(status_code=400, detail=str(e))
+    if task.state == 'PENDING':
+        return {"task_id": task_id, "status": "Task is still processing"}
+    elif task.state == 'SUCCESS':
+        return {"task_id": task_id, "status": "Task completed", "result": task.result}
+    else:
+        return {"task_id": task_id, "status": task.state}
 
 
 @app.post("/add")
