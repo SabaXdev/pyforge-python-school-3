@@ -18,7 +18,8 @@ celery = Celery(
 celery.conf.update(
     worker_hijack_root_logger=False,
     worker_log_format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    worker_task_log_format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    worker_task_log_format='%(asctime)s - %(name)s - %(levelname)s - '
+                           '%(message)s',
     worker_log_color=False,
     loglevel='DEBUG'
 )
@@ -58,8 +59,8 @@ def search_molecules_task(substructure_smile: str):
     # Perform the substructure search if not cached
     logger.info(f"Performing substructure search for: {substructure_smile}")
     try:
-        results = crud.search_molecules(db=db,
-            substructure_smile=substructure_smile)
+        results = crud.search_molecules(
+            db=db, substructure_smile=substructure_smile)
 
         set_cache(cache_key, {"results": results}, expiration=300)
         logger.info(f"Search completed, found {len(results)} "

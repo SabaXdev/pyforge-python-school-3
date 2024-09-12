@@ -1,12 +1,11 @@
 import pytest
 import logging
 from fastapi.testclient import TestClient
-from main import app, get_db, celery
+from main import app, get_db
 from models import Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from unittest.mock import patch, MagicMock
-from celery.result import AsyncResult
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -14,8 +13,10 @@ logging.basicConfig(level=logging.INFO)
 
 # Set up the SQLite database URL (for test)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(
+    autocommit=False, autoflush=False, bind=engine)
 
 client = TestClient(app)
 
@@ -55,7 +56,8 @@ def test_search_molecules_by_smile(substructure_smile, db_session):
         mock_task.return_value = MagicMock(id="123", status="PENDING")
 
         # Perform the search for the given substructure SMILES
-        response = client.get(f"/search?substructure_smile={substructure_smile}")
+        response = client.get(
+            f"/search?substructure_smile={substructure_smile}")
         assert response.status_code == 200
         response_data = response.json()
 
@@ -64,7 +66,8 @@ def test_search_molecules_by_smile(substructure_smile, db_session):
         assert response_data["task_id"] == "123"
         assert response_data["status"] == "PENDING"
 
-    logger.info(f"Completed test for searching substructure smile {substructure_smile}.")
+    logger.info(f"Completed test for searching substructure smile "
+                f"{substructure_smile}.")
 
 
 # Test for /search/{task_id} endpoint (Task status retrieval)
