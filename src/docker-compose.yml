@@ -1,22 +1,52 @@
 # docker-compose.yml
-version: '3.8'
-
 services:
+  # First FastAPI instance
   web1:
     build: .
     volumes:
       - .:/app
     environment:
       SERVER_ID: SERVER-1
+      REDIS_HOST: redis
     networks:
       - webnet
+    depends_on:
+      - redis
+      - celery_worker
+    ports:
+      - "8001:8000"
 
+  # Second FastAPI instance
   web2:
     build: .
     volumes:
       - .:/app
     environment:
       SERVER_ID: SERVER-2
+      REDIS_HOST: redis
+    networks:
+      - webnet
+    depends_on:
+      - redis
+      - celery_worker
+    ports:
+      - "8002:8000"
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - webnet
+    ports:
+      - "6379:6379"
+
+  celery_worker:
+    build: .
+    command: celery -A celery_worker worker --pool=solo -l info
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
     networks:
       - webnet
 
@@ -34,3 +64,4 @@ services:
 
 networks:
   webnet:
+    driver: bridge
