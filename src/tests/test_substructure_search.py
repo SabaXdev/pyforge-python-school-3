@@ -1,45 +1,26 @@
-import logging
-
 import pytest
+import logging
 from fastapi.testclient import TestClient
+from main import app, get_db, celery
+from models import Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from main import app, get_db
-from models import Base
+from unittest.mock import patch, MagicMock
+from celery.result import AsyncResult
 
 # Set up logging
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO,
-                    format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO)
 
-# Set up the SQLite database URL (using a file for tests)
+# Set up the SQLite database URL (for test)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
+engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Create the engine and session for the test
-engine = create_engine(SQLALCHEMY_DATABASE_URL,
-                       connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
-                                   bind=engine)
-
-# Create a new test client for FastAPI
 client = TestClient(app)
 
 
-# Override the get_db dependency to use the test database session
-@pytest.fixture(scope="function")
-def db_session():
-    logger.info("Setting up the test database.")
-    Base.metadata.create_all(bind=engine)  # Create the tables
-    db = TestingSessionLocal()
-    try:
-        yield db  # Provide the db session to the test
-    finally:
-        db.close()
-        Base.metadata.drop_all(bind=engine)  # Drop the tables after the test
-        logger.info("Test database teardown completed.")
-
-
-# Dependency override for get_db
+# Override get_db for testing
 def override_get_db():
     db = TestingSessionLocal()
     try:
@@ -51,35 +32,66 @@ def override_get_db():
 app.dependency_overrides[get_db] = override_get_db
 
 
-# Test for searching molecules by substructure SMILES
-@pytest.mark.parametrize("substructure_smile, expected_result", [
-    ("CC", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),
-    ("c1ccccc1", ["c1ccccc1", "CC(=O)Oc1ccccc1C(=O)O"]),
-    ("O", ["CCO", "CC(=O)O", "CC(=O)Oc1ccccc1C(=O)O"]),
-    ("P", []),  # No molecules containing Phosphorus
+@pytest.fixture(scope="function")
+def db_session():
+    Base.metadata.create_all(bind=engine)
+    db = TestingSessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+        Base.metadata.drop_all(bind=engine)
+
+
+# Test for /search endpoint (Celery task submission)
+@pytest.mark.parametrize("substructure_smile", [
+    "CC", "c1ccccc1", "O", "P"
 ])
-def test_search_molecules_by_smile(substructure_smile, expected_result,
-                                   db_session):
+def test_search_molecules_by_smile(substructure_smile, db_session):
     logger.info("Starting test for searching molecules by smile")
-    # Add initial molecules
-    initial_molecules = [
-        {"mol_id": 1, "name": "CCO"},
-        {"mol_id": 2, "name": "c1ccccc1"},
-        {"mol_id": 3, "name": "CC(=O)O"},
-        {"mol_id": 4, "name": "CC(=O)Oc1ccccc1C(=O)O"}
-    ]
-    for mol in initial_molecules:
-        response = client.post(f"/molecules/{mol['mol_id']}", json=mol)
-        logger.info(f"API POST Response: {response.json()}")
 
-    # Perform the search for the given substructure SMILES
-    response = client.get(f"/search?substructure_smile={substructure_smile}")
-    logger.info(f"API GET Response: {response.json()}")
-    assert response.status_code == 200
+    # Mock Celery task to avoid actual async task processing in test
+    with patch('main.search_molecules_task.delay') as mock_task:
+        mock_task.return_value = MagicMock(id="123", status="PENDING")
 
-    # Validate that the search results match the expected list of molecules
-    response_molecules = response.json()
-    assert sorted(response_molecules) == sorted(expected_result)
+        # Perform the search for the given substructure SMILES
+        response = client.get(f"/search?substructure_smile={substructure_smile}")
+        assert response.status_code == 200
+        response_data = response.json()
 
-    logger.info(f"Completed test for searching substructure "
-                f"smile {substructure_smile}.")
+        # Ensure task_id and status are returned
+        assert "task_id" in response_data
+        assert response_data["task_id"] == "123"
+        assert response_data["status"] == "PENDING"
+
+    logger.info(f"Completed test for searching substructure smile {substructure_smile}.")
+
+
+# Test for /search/{task_id} endpoint (Task status retrieval)
+def test_get_task_status(db_session):
+    logger.info("Starting test for getting task status")
+
+    # Mock AsyncResult to simulate task behavior
+    with patch('main.AsyncResult') as mock_async_result:
+        # Simulate a task that is still processing
+        mock_async_result.return_value = MagicMock(state="PENDING")
+
+        # Check task status when it's pending
+        response = client.get("/search/123")
+        assert response.status_code == 200
+        response_data = response.json()
+        assert response_data["status"] == "Task is still processing"
+        assert response_data["task_id"] == "123"
+
+        # Simulate a task that has completed successfully
+        mock_async_result.return_value.state = "SUCCESS"
+        mock_async_result.return_value.result = ["CCO", "c1ccccc1"]
+
+        # Check task status when it's completed
+        response = client.get("/search/123")
+        assert response.status_code == 200
+        response_data = response.json()
+        assert response_data["status"] == "Task completed"
+        assert response_data["result"] == ["CCO", "c1ccccc1"]
+
+    logger.info("Completed test for getting task status.")
