@@ -1,94 +1,73 @@
-# Python Summer School 2024
 
-## Substructure search
+# Molecules Project
 
-Substructure search of chemical compounds is a crucial tool in cheminformatics, enabling researchers to identify and analyze chemical structures containing specific substructures. This method is widely applied in various fields of chemistry, including drug discovery, materials science, and environmental research. Substructure search helps scientists and engineers identify compounds with desired properties, predict reactivity, and understand the mechanisms of chemical reactions.
+## Overview
 
-Modern chemical compound databases contain millions of entries, making traditional search methods inefficient and time-consuming. Substructure search utilizes algorithms that allow for quick and accurate identification of compounds with specified structural fragments. These algorithms are based on graph theory and the use of SMARTS (SMiles ARbitrary Target Specification) codes, ensuring high performance and precision in the search process.
+This project leverages GitHub Actions to automate the deployment of our application to an AWS EC2 instance whenever changes are pushed to the main or other branches. This ensures that our application is always up-to-date and running the latest code.
 
-## SMILES
+## GitHub Actions Workflow
 
-A key element in the representation of chemical structures is the Simplified Molecular Input Line Entry System (SMILES). SMILES is a notation that allows a user to represent a chemical structure in a way that can be easily processed by computers. It encodes molecular structures as a series of text strings, which can then be used for various computational analyses, including substructure searches. The simplicity and efficiency of SMILES make it a widely adopted standard in cheminformatics.
+The workflow is defined in a YAML file located in the `.github/workflows` directory. It contains steps for setting up the environment, installing dependencies, uploading code to the EC2 instance, and starting the application.
 
-Here are some examples of SMILES notation:
+### 1. **Installing Dependencies**
 
-- Water (H₂O): O
+When a push is made to the main branch, the workflow is triggered. The first step involves setting up the Python environment and installing necessary dependencies. This is done using the following steps:
 
-- Methane (CH₄): C
+```yaml
+- name: Set up Python
+  uses: actions/setup-python@v4
+  with:
+    python-version: '3.10'
 
-- Ethanol (C₂H₅OH): CCO
+- name: Install dependencies
+  run: |
+    python -m pip install --upgrade pip
+    pip install -r src/requirements.txt
+```
 
-- Benzene (C₆H₆): c1ccccc1
+- **Set up Python:** Specifies the Python version required for the project.
+- **Install dependencies:** Upgrades `pip` and installs all the required packages listed in the `requirements.txt` file.
 
-- Acetic acid (CH₃COOH): CC(=O)O
+### 2. **Uploading Code**
 
-- Aspirin (C₉H₈O₄): CC(=O)Oc1ccccc1C(=O)O
+After the dependencies are installed, the workflow uploads the application code to the EC2 instance using SCP (Secure Copy Protocol). The relevant section of the workflow looks like this:
 
-## Examples of Substructure Search
+```yaml
+- name: Upload code via SCP
+  uses: appleboy/scp-action@master
+  with:
+    host: ${{ secrets.EC2_HOST }}
+    username: ${{ secrets.EC2_USER }}
+    key: ${{ secrets.EC2_SSH_KEY }}
+    source: "./*"
+    target: "/home/ubuntu/"
+```
 
+- **Host:** The public IP address or DNS of the EC2 instance, stored as a GitHub secret.
+- **Username:** The username for the EC2 instance (e.g., `ubuntu`).
+- **Key:** The SSH private key for accessing the EC2 instance, also stored as a GitHub secret.
+- **Source:** The local files to upload, specified as `"./*"` to copy everything in the repository.
+- **Target:** The directory on the EC2 instance where the code will be uploaded.
 
-Below are some examples of substructure searches with visual representations:
+### 3. **Starting the Application**
 
-1. Searching for the Benzene Ring:
-   - Substructure (Benzene): c1ccccc1
-   
-   <img title="a title" alt="Alt text" src="./images/c1ccccc1.png">
-   
-   - Example of Found Compound (Toluene): Cc1ccccc1
-   
-   <img title="a title" alt="Alt text" src="./images/Cc1ccccc1.png">
-   
-2. Searching for a Carboxylic Acid Group:
-   - Substructure (Carboxylic Acid): C(=O)O
-   
-   <img title="a title" alt="Alt text" src="./images/C(=O)O.png">
-   
-   - Example of Found Compound (Acetic Acid): CC(=O)O
-   
-   <img title="a title" alt="Alt text" src="./images/CC(=O)O.png">
+Once the code is uploaded, the workflow SSHs into the EC2 instance to start the application. This is achieved through the following step:
 
-These examples illustrate how substructure searches can be used to find compounds containing specific functional groups or structural motifs. By using SMILES notation and cheminformatics tools, researchers can efficiently identify and study compounds of interest.
+```yaml
+- name: SSH into EC2 instance and deploy
+  uses: appleboy/ssh-action@master
+  with:
+    host: ${{ secrets.EC2_HOST }}
+    username: ${{ secrets.EC2_USER }}
+    key: ${{ secrets.EC2_SSH_KEY }}
+    script: |
+      sudo apt update && sudo apt install -y python3-pip
+      pip3 install -r requirements.txt
+      nohup python3 main.py &
+```
 
-## Homework
+- **Script Execution:** The script updates the package manager, installs `python3-pip`, installs the application requirements, and starts the application in the background using `nohup`.
 
-Every week we will add tasks to the folder **hw**. 
-Delivery details are available in the **README.md** in the **hw**
+### Conclusion
 
-## Roadmap
-
-As part of our homeworks, we will try to build a web service for storing and substructural search of chemical compounds
-
-- Use the **RDKit** library to implement substructure search
-
-<img title="a title" alt="Alt text" src="./images/1.png">
-
-- Build RESTful API using **FastApi**
-
-<img title="a title" alt="Alt text" src="./images/2.png">
-
-- Containerizing our solution using **Docker**
-
-<img title="a title" alt="Alt text" src="./images/3.png">
-
-- Adding tests using **pytest**
-
-<img title="a title" alt="Alt text" src="./images/4.png">
-
-- **CI / CD**
-
-<img title="a title" alt="Alt text" src="./images/5.png">
-
-- We will add a **database** for storing molecules
-
-<img title="a title" alt="Alt text" src="./images/6.png">
-
-- **Logging**
-
-<img title="a title" alt="Alt text" src="./images/7.png">
-
-- We will add caching using **Redis** to optimize queries
-
-<img title="a title" alt="Alt text" src="./images/8.png">
-
-- **Celery** to speed up queries
-<img title="a title" alt="Alt text" src="./images/9.png">
+This GitHub Actions workflow streamlines the deployment process, ensuring that every push to the main branch results in an automatic deployment to our AWS EC2 instance. This not only saves time but also minimizes the chances of human error during the deployment process.
