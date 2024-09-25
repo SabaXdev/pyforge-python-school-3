@@ -70,3 +70,5 @@ tzdata
 uvicorn
 wcwidth
 wheel
+
+boto3
