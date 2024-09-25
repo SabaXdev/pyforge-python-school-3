@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     services:
@@ -24,22 +23,49 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'  # Specify your Python version
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r src/requirements.txt
-        pip install sqlalchemy
-        pip install pytest flake8
+        pip install sqlalchemy pytest flake8
 
     - name: Check Installed Packages
       run: pip freeze
 
     - name: Run tests
-      run: |
-        pytest
+      run: pytest
 
     - name: Run flake8
-      run: |
-        flake8 .
+      run: flake8 .
+
+    - name: Set up AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-north-1
+
+    - name: Upload code via SCP
+      uses: appleboy/scp-action@master
+      with:
+       host: ${{ secrets.EC2_HOST }}            # Your EC2 public IP or DNS
+       username: ${{ secrets.EC2_USER }}         # EC2 instance username (e.g., 'ubuntu')
+       key: ${{ secrets.EC2_SSH_KEY }}           # Your SSH private key added as a GitHub secret
+       source: "./*"                             # Files to copy (this copies everything in the repo)
+       target: "/home/ubuntu/"           # Target directory on EC2 instance
+
+
+    - name: SSH into EC2 instance and deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd /home/ubuntu/
+          sudo apt update
+          sudo apt install -y python3-pip
+          pip3 install -r requirements.txt
+          nohup python3 main.py &
