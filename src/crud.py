@@ -24,7 +24,7 @@ def get_molecule_by_id(db: Session, molecule_id: int):
     db_molecule = db.query(models.Molecule).filter(
         models.Molecule.mol_id == molecule_id).first()
     if db_molecule:
-        logger.info("Molecule found: %s", db_molecule.name)
+        logger.info("Molecule found:  %s", db_molecule.name)
     return db_molecule
 
 
