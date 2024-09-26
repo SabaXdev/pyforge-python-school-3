@@ -7,7 +7,7 @@ lambda_client = session.client('lambda')
 
 # Define the event to send
 event = {
-    'names': ['Saba', 'Davit', 'Nikoloz']
+    'names': ['Saba', 'Davit', 'Nikoloz', 'Gio']
 }
 
 # Invoke the Lambda function
