@@ -1,41 +1,92 @@
+import logging
+
 import pytest
 from fastapi.testclient import TestClient
-from main import Molecule, app
+from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
+from main import app, get_db
+from models import Base
+
+# Set up logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s")
 
 
-@pytest.fixture
-def client():
-    with TestClient(app) as test_client:
-        yield test_client
+# Set up the SQLite database URL (using a file for tests)
+SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
+
+# Create the engine and session for the test
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
+
+# Create a new test client for FastAPI
+client = TestClient(app)
 
 
-@pytest.fixture
-def molecules():
-    return {
-        1: Molecule(mol_id=1, name="CCO"),
-        2: Molecule(mol_id=2, name="c1ccccc1"),
-        3: Molecule(mol_id=3, name="CC(=O)O"),
-        4: Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")
-    }
+# Override the get_db dependency to use the test database session
+@pytest.fixture(scope="function")
+def db_session():
+    logger.info("Setting up the test database.")
+    Base.metadata.create_all(bind=engine)  # Create the tables
+    db = TestingSessionLocal()
+    try:
+        yield db  # Provide the db session to the test
+    finally:
+        db.close()
+        Base.metadata.drop_all(bind=engine)  # Drop the tables after the test
+        logger.info("Test database teardown completed.")
+
+
+# Dependency override for get_db
+def override_get_db():
+    db = TestingSessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+app.dependency_overrides[get_db] = override_get_db
 
 
 # Test for retrieving molecules
-@pytest.mark.parametrize("mol_id", [1, 2, 3, 4, 5, 10])
-def test_retrieve_molecule(client, molecules, mol_id):
+@pytest.mark.parametrize("mol_id, expected_status_code, expected_response", [
+    (1, 200, {"mol_id": 1, "name": "CCO"}),
+    (2, 200, {"mol_id": 2, "name": "c1ccccc1"}),
+    (3, 200, {"mol_id": 3, "name": "CC(=O)O"}),
+    (4, 200, {"mol_id": 4, "name": "CC(=O)Oc1ccccc1C(=O)O"}),
+    (5, 404, {"detail": "Molecule not found"}),
+    (10, 404, {"detail": "Molecule not found"})
+])
+def test_retrieve_molecule(mol_id, expected_status_code, expected_response,
+                           db_session):
+    logger.info(f"Starting test for retrieving molecule with ID: "
+                f"{mol_id}")
+    # Insert test data if needed
+    if mol_id in [1, 2, 3, 4]:  # Only insert molecules that should be
+        # retrievable
+        db_session.execute(
+            text("INSERT INTO molecules (mol_id, name) "
+                 "VALUES (:mol_id, :name)"),
+            {"mol_id": mol_id, "name": expected_response["name"]}
+        )
+        db_session.commit()
+
     response = client.get(f"/molecules/{mol_id}")
+    logger.info(f"API GET Response: {response.json()}")
 
-    if response.status_code == 200:
+    assert response.status_code == expected_status_code
 
-        expected_molecule = molecules[mol_id]
-        assert expected_molecule is not None
-
-        # Convert expected molecule to dictionary for comparison
-        expected_data = {"mol_id": expected_molecule.mol_id,
-                         "name": expected_molecule.name}
-
-        assert response.json() == expected_data
-
+    # Check the response JSON based on status code
+    if expected_status_code == 200:
+        response_data = response.json()
+        assert response_data["mol_id"] == expected_response["mol_id"]
+        assert response_data["name"] == expected_response["name"]
     else:
-        # When status is 404, check the error message
-        assert response.json() == {"detail": f"Molecule with id "
-                                             f"{mol_id} not found."}
+        # For 404 errors, just compare the entire response JSON
+        assert response.json() == expected_response
+    logger.info(f"Completed test for molecule with ID: "
+                f"{mol_id}")
