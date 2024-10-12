@@ -2497,3 +2497,118 @@
 2024-09-12 19:55:48,035 - main - INFO - Searching for molecules with substructure: CCC
 2024-09-12 19:55:52,692 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (0/20) now.
 2024-09-12 19:55:54,974 - celery.backends.redis - ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2024-10-07 15:48:46,182 - main - INFO - Fetching server ID
+2024-10-07 15:48:56,848 - crud - INFO - Fetching all molecules with skip=0 and limit=100
+2024-10-07 15:48:56,882 - crud - INFO - Yielding molecule with mol_id=1
+2024-10-07 15:48:56,890 - crud - INFO - Yielding molecule with mol_id=2
+2024-10-07 15:48:56,890 - crud - INFO - Yielding molecule with mol_id=3
+2024-10-07 15:48:56,891 - crud - INFO - Yielding molecule with mol_id=4
+2024-10-07 15:48:56,891 - crud - INFO - Yielding molecule with mol_id=5
+2024-10-07 15:48:56,891 - crud - INFO - Yielding molecule with mol_id=6
+2024-10-07 15:48:56,892 - crud - INFO - Yielding molecule with mol_id=7
+2024-10-07 15:48:56,892 - crud - INFO - Yielding molecule with mol_id=8
+2024-10-07 15:48:56,892 - crud - INFO - Yielding molecule with mol_id=9
+2024-10-07 15:48:56,892 - crud - INFO - Yielding molecule with mol_id=10
+2024-10-07 15:48:56,893 - crud - INFO - Yielding molecule with mol_id=11
+2024-10-07 15:48:56,893 - crud - INFO - Yielding molecule with mol_id=12
+2024-10-07 15:48:56,893 - crud - INFO - Yielding molecule with mol_id=13
+2024-10-07 15:48:56,894 - crud - INFO - Yielding molecule with mol_id=14
+2024-10-07 15:48:56,894 - crud - INFO - Yielding molecule with mol_id=15
+2024-10-07 15:48:56,894 - crud - INFO - Yielding molecule with mol_id=16
+2024-10-07 15:48:56,894 - crud - INFO - Yielding molecule with mol_id=17
+2024-10-07 15:48:56,895 - crud - INFO - Yielding molecule with mol_id=18
+2024-10-07 15:48:56,895 - crud - INFO - Yielding molecule with mol_id=19
+2024-10-07 15:48:56,895 - crud - INFO - Yielding molecule with mol_id=20
+2024-10-07 15:48:56,895 - crud - INFO - Yielding molecule with mol_id=21
+2024-10-07 15:48:56,896 - crud - INFO - Yielding molecule with mol_id=22
+2024-10-07 15:48:56,896 - crud - INFO - Yielding molecule with mol_id=23
+2024-10-07 15:48:56,897 - crud - INFO - Yielding molecule with mol_id=24
+2024-10-07 15:48:56,898 - crud - INFO - Yielding molecule with mol_id=25
+2024-10-07 15:48:56,898 - crud - INFO - Yielding molecule with mol_id=26
+2024-10-07 15:48:56,899 - crud - INFO - Yielding molecule with mol_id=27
+2024-10-07 15:48:56,899 - crud - INFO - Yielding molecule with mol_id=28
+2024-10-07 15:48:56,899 - crud - INFO - Yielding molecule with mol_id=29
+2024-10-07 15:48:56,900 - crud - INFO - Yielding molecule with mol_id=30
+2024-10-07 15:48:56,900 - crud - INFO - Yielding molecule with mol_id=31
+2024-10-07 15:48:56,900 - crud - INFO - Yielding molecule with mol_id=32
+2024-10-07 15:48:56,900 - crud - INFO - Yielding molecule with mol_id=33
+2024-10-07 15:48:56,901 - crud - INFO - Yielding molecule with mol_id=34
+2024-10-07 15:48:56,901 - crud - INFO - Yielding molecule with mol_id=35
+2024-10-07 15:48:56,901 - crud - INFO - Yielding molecule with mol_id=36
+2024-10-07 15:48:56,902 - crud - INFO - Yielding molecule with mol_id=37
+2024-10-07 15:48:56,902 - crud - INFO - Yielding molecule with mol_id=38
+2024-10-07 15:48:56,902 - crud - INFO - Yielding molecule with mol_id=39
+2024-10-07 15:48:56,902 - crud - INFO - Yielding molecule with mol_id=40
+2024-10-07 15:48:56,903 - crud - INFO - Yielding molecule with mol_id=41
+2024-10-07 15:48:56,903 - crud - INFO - Yielding molecule with mol_id=42
+2024-10-07 15:48:56,903 - crud - INFO - Yielding molecule with mol_id=43
+2024-10-07 15:48:56,903 - crud - INFO - Yielding molecule with mol_id=44
+2024-10-07 15:48:56,904 - crud - INFO - Yielding molecule with mol_id=45
+2024-10-07 15:48:56,904 - crud - INFO - Yielding molecule with mol_id=46
+2024-10-07 15:48:56,904 - crud - INFO - Yielding molecule with mol_id=47
+2024-10-07 15:48:56,905 - crud - INFO - Yielding molecule with mol_id=48
+2024-10-07 15:48:56,905 - crud - INFO - Yielding molecule with mol_id=49
+2024-10-07 15:48:56,905 - crud - INFO - Yielding molecule with mol_id=50
+2024-10-07 15:48:56,905 - crud - INFO - Yielding molecule with mol_id=51
+2024-10-07 15:48:56,906 - crud - INFO - Yielding molecule with mol_id=52
+2024-10-07 15:48:56,906 - crud - INFO - Yielding molecule with mol_id=53
+2024-10-07 15:48:56,906 - crud - INFO - Yielding molecule with mol_id=54
+2024-10-07 15:48:56,907 - crud - INFO - Yielding molecule with mol_id=55
+2024-10-07 15:48:56,907 - crud - INFO - Yielding molecule with mol_id=56
+2024-10-07 15:48:56,907 - crud - INFO - Yielding molecule with mol_id=57
+2024-10-07 15:48:56,907 - crud - INFO - Yielding molecule with mol_id=58
+2024-10-07 15:48:56,908 - crud - INFO - Yielding molecule with mol_id=59
+2024-10-07 15:48:56,908 - crud - INFO - Yielding molecule with mol_id=60
+2024-10-07 15:48:56,908 - crud - INFO - Yielding molecule with mol_id=61
+2024-10-07 15:48:56,908 - crud - INFO - Yielding molecule with mol_id=62
+2024-10-07 15:48:56,909 - crud - INFO - Yielding molecule with mol_id=63
+2024-10-07 15:48:56,909 - crud - INFO - Yielding molecule with mol_id=64
+2024-10-07 15:48:56,909 - crud - INFO - Yielding molecule with mol_id=65
+2024-10-07 15:48:56,910 - crud - INFO - Yielding molecule with mol_id=66
+2024-10-07 15:48:56,910 - crud - INFO - Yielding molecule with mol_id=67
+2024-10-07 15:48:56,910 - crud - INFO - Yielding molecule with mol_id=68
+2024-10-07 15:48:56,910 - crud - INFO - Yielding molecule with mol_id=69
+2024-10-07 15:48:56,911 - crud - INFO - Yielding molecule with mol_id=70
+2024-10-07 15:48:56,911 - crud - INFO - Yielding molecule with mol_id=71
+2024-10-07 15:48:56,911 - crud - INFO - Yielding molecule with mol_id=72
+2024-10-07 15:48:56,911 - crud - INFO - Yielding molecule with mol_id=73
+2024-10-07 15:48:56,912 - crud - INFO - Yielding molecule with mol_id=74
+2024-10-07 15:48:56,912 - crud - INFO - Yielding molecule with mol_id=75
+2024-10-07 15:48:56,912 - crud - INFO - Yielding molecule with mol_id=76
+2024-10-07 15:48:56,913 - crud - INFO - Yielding molecule with mol_id=77
+2024-10-07 15:48:56,913 - crud - INFO - Yielding molecule with mol_id=78
+2024-10-07 15:48:56,913 - crud - INFO - Yielding molecule with mol_id=79
+2024-10-07 15:48:56,914 - crud - INFO - Yielding molecule with mol_id=80
+2024-10-07 15:48:56,915 - crud - INFO - Yielding molecule with mol_id=81
+2024-10-07 15:48:56,915 - crud - INFO - Yielding molecule with mol_id=82
+2024-10-07 15:48:56,915 - crud - INFO - Yielding molecule with mol_id=83
+2024-10-07 15:48:56,915 - crud - INFO - Yielding molecule with mol_id=84
+2024-10-07 15:48:56,916 - crud - INFO - Yielding molecule with mol_id=85
+2024-10-07 15:48:56,916 - crud - INFO - Yielding molecule with mol_id=86
+2024-10-07 15:48:56,916 - crud - INFO - Yielding molecule with mol_id=87
+2024-10-07 15:48:56,916 - crud - INFO - Yielding molecule with mol_id=88
+2024-10-07 15:48:56,917 - crud - INFO - Yielding molecule with mol_id=89
+2024-10-07 15:48:56,917 - crud - INFO - Yielding molecule with mol_id=90
+2024-10-07 15:48:56,917 - crud - INFO - Yielding molecule with mol_id=91
+2024-10-07 15:48:56,917 - crud - INFO - Yielding molecule with mol_id=92
+2024-10-07 15:48:56,918 - crud - INFO - Yielding molecule with mol_id=93
+2024-10-07 15:48:56,918 - crud - INFO - Yielding molecule with mol_id=94
+2024-10-07 15:48:56,918 - crud - INFO - Yielding molecule with mol_id=95
+2024-10-07 15:48:56,918 - crud - INFO - Yielding molecule with mol_id=96
+2024-10-07 15:48:56,919 - crud - INFO - Yielding molecule with mol_id=97
+2024-10-07 15:48:56,919 - crud - INFO - Yielding molecule with mol_id=98
+2024-10-07 15:48:56,919 - crud - INFO - Yielding molecule with mol_id=99
+2024-10-07 15:48:56,919 - crud - INFO - Yielding molecule with mol_id=100
+2024-10-07 15:48:56,919 - crud - INFO - Yielded a total of 100 molecules
+2024-10-07 15:49:06,546 - main - INFO - Retrieving molecule with ID 12
+2024-10-07 15:49:06,561 - crud - INFO - Molecule found:  CCOCC
+2024-10-07 15:49:18,427 - main - INFO - Searching for molecules with substructure: CC
+2024-10-07 16:56:46,594 - main - INFO - Fetching server ID
+2024-10-12 12:22:26,913 - main - INFO - Fetching server ID
+2024-10-12 12:22:36,482 - main - INFO - Retrieving molecule with ID 10
+2024-10-12 12:22:36,514 - crud - INFO - Molecule found:  C1=CC=CC=C1O
+2024-10-12 12:22:51,230 - main - INFO - Searching for molecules with substructure: CC
+2024-10-12 12:25:51,874 - main - INFO - Retrieving molecule with ID 11
+2024-10-12 12:25:51,879 - crud - INFO - Molecule found:  CCCC
+2024-10-12 12:26:06,620 - main - INFO - Searching for molecules with substructure: CC
+2024-10-12 12:26:21,278 - main - INFO - Searching for molecules with substructure: CC
