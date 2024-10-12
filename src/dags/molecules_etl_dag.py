@@ -33,8 +33,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False,
 # 1. Extract Task
 def extract_data(**kwargs):
     query = """
-    SELECT name, description 
-    FROM molecules 
+    SELECT name, description
+    FROM molecules
     WHERE date(created_at) = date('now')
     """
     df = pd.read_sql(query, engine)
