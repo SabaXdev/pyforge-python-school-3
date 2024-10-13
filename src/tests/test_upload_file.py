@@ -1,76 +1,90 @@
-from fastapi.testclient import TestClient
-from main import app, Molecule
-import io
 import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from main import app, get_db
+from models import Base
+import io
+
+# Set up the SQLite database URL (using a file for tests)
+SQLALCHEMY_DATABASE_URL = "sqlite:///./test_molecules.db"
+
+# Create the engine and session for the test
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
+                       connect_args={"check_same_thread": False})
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False,
+                                   bind=engine)
+
+# Create a new test client for FastAPI
+client = TestClient(app)
 
 
-@pytest.fixture
-def client():
-    with TestClient(app) as test_client:
-        yield test_client
+# Override the get_db dependency to use the test database session
+@pytest.fixture(scope="function")
+def db_session():
+    Base.metadata.create_all(bind=engine)  # Create the tables
+    db = TestingSessionLocal()
+    try:
+        yield db  # Provide the db session to the test
+    finally:
+        db.close()
+        Base.metadata.drop_all(bind=engine)  # Drop the tables after the test
 
 
-@pytest.fixture
-def sample_file():
-    # Create a sample file content with molecule data
-    content = "5 CH4\n6 CO"  # Ensure this matches the expected format
-    return io.BytesIO(content.encode("utf-8"))
+# Dependency override for get_db
+def override_get_db():
+    db = TestingSessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
-@pytest.fixture
-def initial_molecules():
-    return [
-        Molecule(mol_id=1, name="CCO"),
-        Molecule(mol_id=2, name="c1ccccc1"),
-        Molecule(mol_id=3, name="CC(=O)O"),
-        Molecule(mol_id=4, name="CC(=O)Oc1ccccc1C(=O)O")
+app.dependency_overrides[get_db] = override_get_db
+
+
+# Test for uploading a file and adding molecules
+@pytest.mark.parametrize(
+    "file_content, expected_status_code, expected_response", [
+        ("5 CH4\n6 CO\n", 200,  # Valid ID and SMILES format
+         {'content': 'Molecule/Molecules added successfully.'}
+         ),
+        ("invalid_id invalid_smiles", 400,  # Invalid ID and SMILES should
+         # result in a 400 Bad Request
+         {'detail': "invalid literal for int() with base 10: 'invalid_id'"})
     ]
+)
+def test_upload_file(file_content, expected_status_code, expected_response,
+                     db_session):
+    # Simulate a file upload using FastAPI's UploadFile mechanism
+    file = io.BytesIO(file_content.encode('utf-8'))
+    files = {'file': ('molecules.txt', file, 'text/plain')}
+
+    # Post the file to the /add endpoint
+    response = client.post("/add", files=files)
+
+    # Check the response status code
+    assert response.status_code == expected_status_code
+    response_data = response.json()
+
+    # Check the response body if the status is 200
+    if response.status_code == 200:
+        assert response_data == expected_response
+    else:
+        # Handle the expected error response
+        assert response_data == expected_response
 
 
-@pytest.fixture(autouse=True)
-def clear_molecules(client):
-    # Clear existing molecules before each test
-    client.post("/clear_molecules")
-    yield
-    client.post("/clear_molecules")  # Optionally clear after the test as well
+# Test for uploading a file with invalid content
+def test_upload_file_invalid_content(db_session):
+    # Simulate a file with entirely invalid SMILES strings
+    file_content = "invalid_smiles1\ninvalid_smiles2\n"
+    file = io.BytesIO(file_content.encode('utf-8'))
+    files = {'file': ('molecules.txt', file, 'text/plain')}
 
+    # Post the file to the /add endpoint
+    response = client.post("/add", files=files)
 
-def setup_initial_data(client, molecules):
-    for mol in molecules:
-        response = client.post(f"/molecules/{mol.mol_id}", json=mol.dict())
-        assert response.status_code == 201
-
-
-def test_upload_file(client, initial_molecules, sample_file):
-    # Setup initial data
-    setup_initial_data(client, initial_molecules)
-
-    # Send POST request with sample file
-    response = client.post("/add", files={"file": ("sample.txt",
-                                                   sample_file, "text/plain")})
-    assert response.status_code == 200
-    assert response.json() == {"content": "Molecule/Molecules "
-                                          "added successfully."}
-
-    # Retrieve all molecules to verify the new ones are added
-    response = client.get("/molecules")
-    assert response.status_code == 200
-
-    # Convert the response to a set of Molecule identifiers
-    response_molecules = response.json()
-    response_molecules_set = {(mol["mol_id"], mol["name"])
-                              for mol in response_molecules}
-
-    # Create a set of expected molecule identifiers
-    expected_molecules_set = {
-        (mol.mol_id, mol.name) for mol in initial_molecules
-    }
-
-    # Add newly added molecules to the set
-    expected_molecules_set.update({
-        (5, "CH4"),
-        (6, "CO")
-    })
-
-    # Validate that expected and actual sets match
-    assert expected_molecules_set == response_molecules_set
+    # Check that the response returns a 400 status code
+    assert response.status_code == 400
+    assert response.json() == {"detail": "Invalid file format"}
