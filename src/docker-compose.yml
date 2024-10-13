@@ -1,22 +1,53 @@
 # docker-compose.yml
-version: '3.8'
-
 services:
+  # First FastAPI instance
   web1:
     build: .
     volumes:
       - .:/app
     environment:
       SERVER_ID: SERVER-1
+      REDIS_HOST: redis
     networks:
       - webnet
+    depends_on:
+      - redis
+      - celery_worker
+    ports:
+      - "8001:8000"
 
+  # Second FastAPI instance
   web2:
     build: .
     volumes:
       - .:/app
     environment:
       SERVER_ID: SERVER-2
+      REDIS_HOST: redis
+    networks:
+      - webnet
+    depends_on:
+      - redis
+      - celery_worker
+    ports:
+      - "8002:8000"
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - webnet
+    ports:
+      - "6379:6379"
+    restart: always
+
+  celery_worker:
+    build: .
+    command: celery -A celery_worker worker --pool=solo -l info
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
     networks:
       - webnet
 
@@ -32,5 +63,37 @@ services:
     networks:
       - webnet
 
+  airflow-webserver:
+    image: apache/airflow:2.7.0
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__FERNET_KEY=your_fernet_key
+      - AIRFLOW__WEBSERVER__SECRET_KEY=your_secret_key
+      - AIRFLOW__API__AUTH_BACKEND=airflow.api.auth.backend.basic
+    depends_on:
+      - airflow-scheduler
+      - redis
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+
+  airflow-scheduler:
+    image: apache/airflow:2.7.0
+    restart: always
+    depends_on:
+      - redis
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__API__AUTH_BACKEND=airflow.api.auth.backend.basic
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+
 networks:
   webnet:
+    driver: bridge
